@@ -6,16 +6,17 @@
 
 <!-- Main Content -->
 <main class="container mx-auto py-3">
-    <!-- Featured News Banner -->
-<section class="hero-section h-64 md:h-96 flex mb-8 items-center justify-center">
-    <div class="relative rounded overflow-hidden shadow-lg w-full max-w-6xl">
+    
+<!-- Featured News Banner -->
+<section class="hero-section h-64 md:h-110 flex mb-8 items-center justify-center">
+    <div class="relative rounded overflow-hidden shadow-lg w-full">
         <!-- Slideshow Container -->
-        <div class="relative h-96 overflow-hidden">
+        <div class="relative h-110 overflow-hidden">
             <!-- Slides -->
             <div class="slide-container relative h-full">
                 <!-- Slide 1 -->
                 <div class="slide absolute inset-0 transition-opacity duration-1000">
-                    <img src="/images/gambar.jpeg" alt="Berita Utama 1" class="w-full h-96 object-cover">
+                    <img src="/images/gambar.jpeg" alt="Berita Utama 1" class="w-full h-110 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Program Bantuan Subsidi Bibit Tanaman Sayuran</h2>
                         <p class="text-white/90">Desa Air Senggeris meluncurkan program subsidi bibit tanaman sayuran bagi petani</p>
@@ -27,7 +28,7 @@
                 
                 <!-- Slide 2 -->
                 <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-                    <img src="/images/gambar2.jpeg" alt="Berita Utama 2" class="w-full h-96 object-cover">
+                    <img src="/images/gambar2.jpeg" alt="Berita Utama 2" class="w-full h-110 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Festival Budaya Desa Air Senggeris</h2>
                         <p class="text-white/90">Rangkaian kegiatan untuk melestarikan budaya lokal dan meningkatkan pariwisata desa</p>
@@ -39,7 +40,7 @@
                 
                 <!-- Slide 3 -->
                 <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-                    <img src="/images/gambar3.jpeg" alt="Berita Utama 3" class="w-full h-96 object-cover">
+                    <img src="/images/gambar3.jpeg" alt="Berita Utama 3" class="w-full h-110 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Pembangunan Jalan Desa Tahap Kedua</h2>
                         <p class="text-white/90">Peningkatan infrastruktur jalan untuk menghubungkan wilayah terpencil di Desa Air Senggeris</p>

@@ -17,11 +17,11 @@
                  </div>
              </div>
 
-             <!-- Tanggal dan Waktu -->
-             <div class="flex items-center space-x-2 text-blue-600 font-medium">
-                 <i class="far fa-calendar-alt"></i>
-                 <span>Selasa, 30 September 2025, 17:20:05</span>
-             </div>
+             <!-- Tanggal dan Waktu Dinamis -->
+            <div class="flex items-center space-x-2 text-blue-600 font-medium">
+                <i class="far fa-calendar-alt"></i>
+                <span id="currentDateTime"></span>
+            </div>
          </div>
  </section>
 
@@ -68,3 +68,40 @@
          </div>
      </div>
  </nav>
+
+ <script>
+    // Fungsi untuk memperbarui tanggal dan waktu
+    function updateDateTime() {
+        const now = new Date();
+        
+        // Nama hari dalam bahasa Indonesia
+        const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+        const dayName = days[now.getDay()];
+        
+        // Nama bulan dalam bahasa Indonesia
+        const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 
+                        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        const monthName = months[now.getMonth()];
+        
+        // Format tanggal
+        const date = now.getDate();
+        const year = now.getFullYear();
+        
+        // Format waktu dengan leading zero
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        // Gabungkan semua format
+        const formattedDateTime = `${dayName}, ${date} ${monthName} ${year}, ${hours}:${minutes}:${seconds}`;
+        
+        // Update elemen HTML
+        document.getElementById('currentDateTime').textContent = formattedDateTime;
+    }
+    
+    // Panggil fungsi pertama kali
+    updateDateTime();
+    
+    // Update setiap detik
+    setInterval(updateDateTime, 1000);
+</script>

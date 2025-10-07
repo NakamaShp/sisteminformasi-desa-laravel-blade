@@ -5,14 +5,11 @@
 
 @section ('content')
 
-
-
 <section class="bg-gray-50">
     <!-- Header -->
     <div x-data="{ menuOpen: false }" class="container max-w-7xl mx-auto px-10">
         <!-- Header -->
      
-
         <!-- Hero Section -->
         <section class="relative">
             <div>
