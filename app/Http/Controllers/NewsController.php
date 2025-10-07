@@ -14,7 +14,7 @@ class NewsController extends Controller
         $news = News::all();
         $banners = Banner::all();
         $featureds = News::where('is_featured', true)->get();
-        return view('pages.news', compact('news', 'banners', 'featureds'));
+        return view('berita', compact('news', 'banners', 'featureds'));
     }
 
     public function show($slug)
@@ -29,5 +29,22 @@ class NewsController extends Controller
             ->take(4);
 
         return view('pages.show', compact('news', 'newests', 'categories'));
+    }
+
+    public function view($slug)
+    {
+        $news = News::where('slug', $slug)->firstOrFail();
+
+        // Tambah jumlah views setiap kali berita dibuka
+        $news->increment('views');
+
+        return view('news.show', compact('news'));
+
+        if (!request()->hasCookie($cookieName)) {
+            $news->increment('views');
+            cookie()->queue(cookie($cookieName, true, 5)); // berlaku 5 menit
+        }
+
+        return view('news.show', compact('news'));
     }
 }
