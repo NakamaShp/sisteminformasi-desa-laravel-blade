@@ -4,183 +4,228 @@
 
 @section('content')
 
-<!-- Main Content -->
-<main class="container mx-auto py-3">
+    <!-- Main Content -->
+    <main class="container mx-auto py-3">
 
-    
-<!-- Featured News Banner -->
-<section class="hero-section h-64 md:h-110 flex mb-8 items-center justify-center">
-    <div class="relative rounded overflow-hidden shadow-lg w-full">
-        <!-- Slideshow Container -->
-        <div class="relative h-110 overflow-hidden">
-            <!-- Slides -->
-            <div class="slide-container relative h-full">
-                <!-- Slide 1 -->
-                <div class="slide absolute inset-0 transition-opacity duration-1000">
-                    <img src="/images/gambar.jpeg" alt="Berita Utama 1" class="w-full h-110 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Program Bantuan Subsidi Bibit Tanaman Sayuran</h2>
-                        <p class="text-white/90">Desa Air Senggeris meluncurkan program subsidi bibit tanaman sayuran bagi petani</p>
-                        <a href="#" class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                            Baca Selengkapnya
-                        </a>
+
+        <!-- Featured News Banner -->
+        <section class="hero-section h-64 md:h-110 flex mb-8 items-center justify-center">
+            <div class="relative rounded overflow-hidden shadow-lg w-full">
+                <!-- Slideshow Container -->
+                <div class="relative h-110 overflow-hidden">
+                    <!-- Slides -->
+                    <div class="slide-container relative h-full">
+                        <!-- Slide 1 -->
+                        <div class="slide absolute inset-0 transition-opacity duration-1000">
+                            <img src="/images/gambar.jpeg" alt="Berita Utama 1" class="w-full h-110 object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
+                                <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Program Bantuan Subsidi Bibit
+                                    Tanaman Sayuran</h2>
+                                <p class="text-white/90">Desa Air Senggeris meluncurkan program subsidi bibit tanaman
+                                    sayuran bagi petani</p>
+                                <a href="#"
+                                    class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                            <img src="/images/gambar2.jpeg" alt="Berita Utama 2" class="w-full h-110 object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
+                                <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Festival Budaya Desa Air
+                                    Senggeris</h2>
+                                <p class="text-white/90">Rangkaian kegiatan untuk melestarikan budaya lokal dan meningkatkan
+                                    pariwisata desa</p>
+                                <a href="#"
+                                    class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                            <img src="/images/gambar3.jpeg" alt="Berita Utama 3" class="w-full h-110 object-cover">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
+                                <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Pembangunan Jalan Desa Tahap
+                                    Kedua</h2>
+                                <p class="text-white/90">Peningkatan infrastruktur jalan untuk menghubungkan wilayah
+                                    terpencil di Desa Air Senggeris</p>
+                                <a href="#"
+                                    class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Slide 2 -->
-                <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-                    <img src="/images/gambar2.jpeg" alt="Berita Utama 2" class="w-full h-110 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Festival Budaya Desa Air Senggeris</h2>
-                        <p class="text-white/90">Rangkaian kegiatan untuk melestarikan budaya lokal dan meningkatkan pariwisata desa</p>
-                        <a href="#" class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                            Baca Selengkapnya
-                        </a>
+
+                    <!-- Navigation Arrows -->
+                    <button id="prevBtn"
+                        class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="nextBtn"
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <!-- Dots Indicator -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        <button class="dot w-3 h-3 bg-white rounded-full opacity-100" data-slide="0"></button>
+                        <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="1"></button>
+                        <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="2"></button>
                     </div>
-                </div>
-                
-                <!-- Slide 3 -->
-                <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-                    <img src="/images/gambar3.jpeg" alt="Berita Utama 3" class="w-full h-110 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
-                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Pembangunan Jalan Desa Tahap Kedua</h2>
-                        <p class="text-white/90">Peningkatan infrastruktur jalan untuk menghubungkan wilayah terpencil di Desa Air Senggeris</p>
-                        <a href="#" class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                            Baca Selengkapnya
-                        </a>
-                    </div>
-                </div>
+                    <!-- Featured News Banner -->
+
+                    <section class="hero-section h-64 md:h-96 flex mb-8 items-center justify-center">
+                        <div class="relative rounded overflow-hidden shadow-lg w-full max-w-6xl">
+                            <!-- Slideshow Container -->
+                            <div class="relative h-96 overflow-hidden">
+                                <!-- Slides -->
+                                <div class="slide-container relative h-full">
+                                    <!-- Slide 1 -->
+                                    <div class="slide absolute inset-0 transition-opacity duration-1000">
+                                        <img src="/images/gambar.jpeg" alt="Berita Utama 1"
+                                            class="w-full h-96 object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
+                                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Program Bantuan
+                                                Subsidi Bibit Tanaman Sayuran</h2>
+                                            <p class="text-white/90">Desa Air Senggeris meluncurkan program subsidi bibit
+                                                tanaman sayuran bagi petani</p>
+                                            <a href="#"
+                                                class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                                Baca Selengkapnya
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                                        <img src="/images/gambar2.jpeg" alt="Berita Utama 2"
+                                            class="w-full h-96 object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
+                                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Festival Budaya Desa
+                                                Air Senggeris</h2>
+                                            <p class="text-white/90">Rangkaian kegiatan untuk melestarikan budaya lokal dan
+                                                meningkatkan pariwisata desa</p>
+                                            <a href="#"
+                                                class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                                Baca Selengkapnya
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 3 -->
+                                    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                                        <img src="/images/gambar3.jpeg" alt="Berita Utama 3"
+                                            class="w-full h-96 object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
+                                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Pembangunan Jalan
+                                                Desa Tahap Kedua</h2>
+                                            <p class="text-white/90">Peningkatan infrastruktur jalan untuk menghubungkan
+                                                wilayah terpencil di Desa Air Senggeris</p>
+                                            <a href="#"
+                                                class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                                                Baca Selengkapnya
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Arrows -->
+                                <button id="prevBtn"
+                                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button id="nextBtn"
+                                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+
+                                <!-- Dots Indicator -->
+                                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                                    <button class="dot w-3 h-3 bg-white rounded-full opacity-100" data-slide="0"></button>
+                                    <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="1"></button>
+                                    <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="2"></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+        </section>
+
+        <!-- News Grid -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Berita Desa</h2>
+            <p class="font-medium text-gray-800 mb-8">Menyajikan informasi terbaru tentang peristiwa, berita
+                terkini, dan artikel-artikel jurnalistik dari Desa Kersik</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- News Item 1 -->
+                @foreach ($news as $new)
+                    <article class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <img src={{ asset('storage/' . $new->thumbnail) }} alt="Berita Pertanian"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span
+                                class="text-xs text-blue-600 font-semibold uppercase tracking-wide">{{ $new->newsCategory->title }}</span>
+                            <h3 class="text-lg font-bold text-gray-800 mt-2 mb-2 line-clamp-2">
+                                {{ $new->title }}</h3>
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                {{ Str::limit(strip_tags($new->content), 50) }}</p>
+                            <div class="flex items-center justify-between text-xs text-gray-500">
+                                <span>{{ $new->updated_at->format('d M Y') }}</span>
+
+                                <div>
+                                    <span class="flex items-center">
+                                        <i class="far fa-eye mr-1"></i>
+                                        {{ $new->views }} views
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+                @endforeach
+
+                <!-- News Item 2 -->
+
             </div>
-            
-            <!-- Navigation Arrows -->
-            <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
+        </section>
+
+        <!-- Load More Button -->
+        <div class="text-center m-12">
+            <button
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                Muat Lebih Banyak Berita
             </button>
-            <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-            
-            <!-- Dots Indicator -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                <button class="dot w-3 h-3 bg-white rounded-full opacity-100" data-slide="0"></button>
-                <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="1"></button>
-                <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="2"></button>
-
-    <!-- Featured News Banner -->
-
-    <section class="hero-section h-64 md:h-96 flex mb-8 items-center justify-center">
-        <div class="relative rounded overflow-hidden shadow-lg w-full max-w-6xl">
-            <!-- Slideshow Container -->
-            <div class="relative h-96 overflow-hidden">
-                <!-- Slides -->
-                <div class="slide-container relative h-full">
-                    <!-- Slide 1 -->
-                    <div class="slide absolute inset-0 transition-opacity duration-1000">
-                        <img src="/images/gambar.jpeg" alt="Berita Utama 1" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
-                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Program Bantuan Subsidi Bibit Tanaman Sayuran</h2>
-                            <p class="text-white/90">Desa Air Senggeris meluncurkan program subsidi bibit tanaman sayuran bagi petani</p>
-                            <a href="#" class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                                Baca Selengkapnya
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-                        <img src="/images/gambar2.jpeg" alt="Berita Utama 2" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
-                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Festival Budaya Desa Air Senggeris</h2>
-                            <p class="text-white/90">Rangkaian kegiatan untuk melestarikan budaya lokal dan meningkatkan pariwisata desa</p>
-                            <a href="#" class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                                Baca Selengkapnya
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-                        <img src="/images/gambar3.jpeg" alt="Berita Utama 3" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
-                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Pembangunan Jalan Desa Tahap Kedua</h2>
-                            <p class="text-white/90">Peningkatan infrastruktur jalan untuk menghubungkan wilayah terpencil di Desa Air Senggeris</p>
-                            <a href="#" class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
-                                Baca Selengkapnya
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Navigation Arrows -->
-                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-
-                <!-- Dots Indicator -->
-                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    <button class="dot w-3 h-3 bg-white rounded-full opacity-100" data-slide="0"></button>
-                    <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="1"></button>
-                    <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="2"></button>
-                </div>
-
-            </div>
         </div>
-    </section>
 
-    <!-- News Grid -->
-    <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-800 mb-2">Berita Desa</h2>
-        <p class="font-medium text-gray-800 mb-8">Menyajikan informasi terbaru tentang peristiwa, berita terkini, dan artikel-artikel jurnalistik dari Desa Kersik</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- News Item 1 -->
-            @foreach ($news as $new )
-            <article class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-                <img src={{ asset('storage/' . $new->thumbnail) }} alt="Berita Pertanian" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <span class="text-xs text-blue-600 font-semibold uppercase tracking-wide">{{ $new->newsCategory->title }}</span>
-                    <h3 class="text-lg font-bold text-gray-800 mt-2 mb-2 line-clamp-2">{{ $new->title }}</h3>
-                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">{{ Str::limit (strip_tags($new->content),50 ) }}</p>
-                    <div class="flex items-center justify-between text-xs text-gray-500">
-                        <span>{{ $new->updated_at->format('d M Y') }}</span>
+    </main>
 
-                        <div>
-                            <span class="flex items-center">
-                                <i class="far fa-eye mr-1"></i>
-                                {{ $new->views }} views
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </article>
-            @endforeach
-
-            <!-- News Item 2 -->
-
-        </div>
-    </section>
-
-    <!-- Load More Button -->
-    <div class="text-center m-12">
-        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
-            Muat Lebih Banyak Berita
-        </button>
-    </div>
-</main>
-</div>
 
 @endsection
 
