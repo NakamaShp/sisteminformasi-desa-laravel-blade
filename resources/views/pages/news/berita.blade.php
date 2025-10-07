@@ -1,0 +1,211 @@
+@extends('layouts.app')
+
+@section('title', 'Portal Berita Desa')
+
+@section('content')
+
+<!-- Main Content -->
+<main class="container mx-auto py-3">
+
+
+    <!-- Featured News Banner -->
+    <section class="hero-section h-64 md:h-110 flex mb-8 items-center justify-center">
+
+        <div class="relative rounded overflow-hidden shadow-lg w-full">
+            @foreach ($banners as $banner )
+
+            <!-- Slideshow Container --> <!-- Slides -->
+            <div class="slide-container relative h-full">
+                <!-- Slide 1 -->
+
+                <div href="{{ route('news.show', $banner->news->slug) }}" class="slide absolute inset-0 transition-opacity duration-1000">
+                    <img src={{ asset('storage/' . $banner->news->thumbnail) }} alt="Berita Utama 1" class="w-full h-110 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">{{ $banner->news->title }}</h2>
+                        <p class="text-white/90">{{ $banner->news->description }}</p>
+                        <a href="{{ route('news.show', $banner->news->slug) }}"
+                            class="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300">
+                            Baca Selengkapnya
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            @endforeach
+            <!-- Navigation Arrows -->
+            <button id="prevBtn"
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="nextBtn"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-2 rounded-full transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+
+        </div>
+
+
+
+
+
+
+        <!-- Dots Indicator -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <button class="dot w-3 h-3 bg-white rounded-full opacity-100" data-slide="0"></button>
+            <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="1"></button>
+            <button class="dot w-3 h-3 bg-white/50 rounded-full" data-slide="2"></button>
+        </div>
+        <!-- Featured News Banner -->
+
+
+    </section>
+
+    <!-- News Grid -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Berita Desa</h2>
+        <p class="font-medium text-gray-800 mb-8">Menyajikan informasi terbaru tentang peristiwa, berita
+            terkini, dan artikel-artikel jurnalistik dari Desa Kersik</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- News Item 1 -->
+            @foreach ($news as $new)
+            <article class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                <img src={{ asset('storage/' . $new->thumbnail) }} alt="Berita Pertanian"
+                    class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <span
+                        class="text-xs text-blue-600 font-semibold uppercase tracking-wide">{{ $new->newsCategory->title }}</span>
+                    <h3 class="text-lg font-bold text-gray-800 mt-2 mb-2 line-clamp-2">
+                        {{ $new->title }}
+                    </h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        {{ Str::limit(strip_tags($new->content), 50) }}
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>{{ $new->updated_at->format('d M Y') }}</span>
+
+                        <div>
+                            <span class="flex items-center">
+                                <i class="far fa-eye mr-1"></i>
+                                {{ $new->views }} views
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+            @endforeach
+
+            <!-- News Item 2 -->
+
+        </div>
+    </section>
+
+    <!-- Load More Button -->
+    <div class="text-center m-12">
+        <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+            Muat Lebih Banyak Berita
+        </button>
+    </div>
+
+</main>
+
+
+@endsection
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Function to show a specific slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.style.opacity = '0';
+            });
+
+            // Remove active state from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('opacity-100');
+                dot.classList.add('opacity-50');
+            });
+
+            // Show the current slide
+            slides[index].style.opacity = '1';
+
+            // Set active state for current dot
+            dots[index].classList.remove('opacity-50');
+            dots[index].classList.add('opacity-100');
+
+            currentSlide = index;
+        }
+
+        // Function to show the next slide
+        function nextSlide() {
+            const newSlide = (currentSlide + 1) % slides.length;
+            showSlide(newSlide);
+        }
+
+        // Function to show the previous slide
+        function prevSlide() {
+            const newSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(newSlide);
+        }
+
+        // Function to start the automatic slideshow
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        // Function to stop the automatic slideshow
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+
+        // Event listeners for navigation buttons
+        nextBtn.addEventListener('click', function() {
+            nextSlide();
+            stopSlideShow();
+            startSlideShow();
+        });
+
+        prevBtn.addEventListener('click', function() {
+            prevSlide();
+            stopSlideShow();
+            startSlideShow();
+        });
+
+        // Event listeners for dots
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-slide'));
+                showSlide(slideIndex);
+                stopSlideShow();
+                startSlideShow();
+            });
+        });
+
+        // Pause slideshow on hover
+        const heroSection = document.querySelector('.hero-section');
+        heroSection.addEventListener('mouseenter', stopSlideShow);
+        heroSection.addEventListener('mouseleave', startSlideShow);
+
+        // Start the slideshow
+        startSlideShow();
+    });
+</script>

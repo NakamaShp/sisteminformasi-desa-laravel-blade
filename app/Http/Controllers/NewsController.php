@@ -14,7 +14,7 @@ class NewsController extends Controller
         $news = News::all();
         $banners = Banner::all();
         $featureds = News::where('is_featured', true)->get();
-        return view('berita', compact('news', 'banners', 'featureds'));
+        return view('pages.news.berita', compact('news', 'banners', 'featureds'));
     }
 
     public function show($slug)
@@ -28,7 +28,7 @@ class NewsController extends Controller
             ->get()
             ->take(4);
 
-        return view('pages.show', compact('news', 'newests', 'categories'));
+        return view('pages.news.detailnews', compact('news', 'newests', 'categories'));
     }
 
     public function view($slug)
