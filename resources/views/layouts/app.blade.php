@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </link>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {{-- Letakkan di dekat CDN SweetAlert --}}
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>@yield('title', 'Website Desa')</title>
     @vite('resources/css/app.css')
 </head>
@@ -18,7 +21,7 @@
     @include('partials.header')
 
     {{-- Konten halaman --}}
-  
+
     <main>
 
         @yield('content')
