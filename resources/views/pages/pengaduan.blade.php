@@ -5,10 +5,10 @@
 
 <!-- Hero Section -->
 <section class="mt-1">
-    <div class="bg-blue-900 text-white py-10 hero-section h-64 md:h-80 flex items-center justify-center">
+    <div class="bg-blue-900 text-white py-10 hero-section h-64 md:h-40 flex items-center justify-center">
         <div class=" p-20 container mx-auto px-4 text-center">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4">Layanan Pengaduan Masyarakat</h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan desa kita bersama</p>
+            <h1 class="text-2xl md:text-3xl font-bold mb-4">Layanan Pengaduan Masyarakat</h1>
+            <p class="text-medium text-blue-100 max-w-3xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan desa kita bersama</p>
         </div>
     </div>
 

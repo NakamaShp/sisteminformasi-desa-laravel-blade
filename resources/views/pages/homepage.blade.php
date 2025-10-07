@@ -11,7 +11,7 @@
         <!-- Header -->
      
         <!-- Hero Section -->
-        <section class="relative">
+        <section class="relative mt-2">
             <div>
                 <img src="{{ asset('images/gambar.jpeg') }}"
                     alt="gambar-1"
@@ -127,28 +127,28 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Sawah" alt="Panorama sawah di desa" class="w-full h-48 object-cover">
+                        <img src="" alt="Panorama sawah di desa" class="w-full h-48 object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Rumah" alt="Rumah adat tradisional" class="w-full h-48 object-cover">
+                        <img src="" alt="Rumah adat tradisional" class="w-full h-48 object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Festival" alt="Festival budaya desa" class="w-full h-48 object-cover">
+                        <img src="" alt="Festival budaya desa" class="w-full h-48 object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Lanskap" alt="Lanskap pegunungan desa" class="w-full h-48 object-cover">
+                        <img src="" alt="Lanskap pegunungan desa" class="w-full h-48 object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Pertanian" alt="Petani bekerja di ladang" class="w-full h-48 object-cover">
+                        <img src="" alt="Petani bekerja di ladang" class="w-full h-48 object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Tanaman" alt="Tanaman herbal tradisional" class="w-full h-48 object-cover">
+                        <img src="" alt="Tanaman herbal tradisional" class="w-full h-48 object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Masyarakat" alt="Masyarakat desa berkumpul" class="w-full h-48 object-cover">
+                        <img src="" alt="Masyarakat desa berkumpul" class="w-full h-48 object-cover">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                        <img src="https://placehold.co/400x300/0066cc/ffffff?text=Tradisi" alt="Tradisi upacara adat" class="w-full h-48 object-cover">
+                        <img src="" alt="Tradisi upacara adat" class="w-full h-48 object-cover">
                     </div>
                 </div>
             </div>

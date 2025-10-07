@@ -23,6 +23,7 @@
                         <li><a href="#" class="hover:text-white transition duration-300">Syarat & Ketentuan</a></li>
                         <li><a href="#" class="hover:text-white transition duration-300">Kebijakan Privasi</a></li>
                         <li><a href="#" class="hover:text-white transition duration-300">FAQ</a></li>     
+                        <li><a href="admin/login" class="hover:text-white transition duration-300">Admin</a></li>     
                     </ul>
                 </div>
                 
