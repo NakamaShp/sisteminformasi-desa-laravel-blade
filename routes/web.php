@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,3 +23,4 @@ Route::get('/pengaduan', function () {
     return view('pengaduan');
 });
 
+Route::get('/berita', [NewsController::class, 'index'])->name('Berita');
