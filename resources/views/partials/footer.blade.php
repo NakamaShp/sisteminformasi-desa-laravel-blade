@@ -3,7 +3,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Desa Air Senggeris</h3>
-                    <p class="text-gray-400">Desa yang penuh dengan keindahan alam dan budaya tradisional yang terpelihara.</p>
+                    <p class="text-gray-400">Melayani masyarakat dengan baik, ramah, dan sesuai dengan SOP yang berlaku</p>
                 </div>
                 
                 <div>
@@ -22,8 +22,7 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#" class="hover:text-white transition duration-300">Syarat & Ketentuan</a></li>
                         <li><a href="#" class="hover:text-white transition duration-300">Kebijakan Privasi</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">FAQ</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Karir</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">FAQ</a></li>     
                     </ul>
                 </div>
                 
@@ -48,7 +47,7 @@
             </div>
             
             <div class="border-t border-gray-800 pt-6 text-center text-gray-400">
-                <p>&copy; 2023 Desa Air Senggeris. Semua hak dilindungi.</p>
+                <p>&copy; 2025 Desa Air Senggeris. Semua hak dilindungi.</p>
             </div>
         </div>
     </footer>

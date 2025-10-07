@@ -26,8 +26,8 @@
         <section id="about" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang Desa Kami</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Desa Air Senggeris adalah desa yang terletak di kawasan pegunungan dengan keindahan alam yang menakjubkan.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang Desa Air Senggeris</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Desa Air Senggeris adalah Desa yang terletak di Kecamatan Suak Tapeh, Kabupaten Banyuasin, Provinsi Sumatera Selatan </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -36,7 +36,7 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Populasi</h3>
-                        <p class="text-gray-600">Sebanyak 1.250 jiwa yang hidup dalam harmoni dengan alam sekitar.</p>
+                        <p class="text-gray-600">Terdapat 1.250 jiwa penduduk</p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
@@ -52,7 +52,7 @@
                             <i class="fas fa-home"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Jumlah Rumah Tangga</h3>
-                        <p class="text-gray-600">Terdiri dari 320 rumah tangga yang menjaga nilai-nilai kerukunan.</p>
+                        <p class="text-gray-600">Terdiri dari 320 rumah tangga di Desa Air Senggeris</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Visi dan Misi Desa</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Membangun desa yang sejahtera, mandiri, dan berbudaya.</p>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Membangun desa yang sejahtera, mandiri, berbudaya dan memiliki daya saing</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -107,15 +107,13 @@
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Lokasi Desa</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Temukan lokasi pasti kami di bawah ini</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Lokasi Desa Air Senggeris</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Temukan lokasi pasti Desa Air Senggeris di bawah ini</p>
                 </div>
 
                 <div class="max-w-4xl mx-auto">
                     <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.943031772756!2d106.82613751476393!3d-6.175298995128807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c69b8a9c0cb%3A0x5b1a086e5a4b8a9f!2sDesa%20Wisata%20Kebun!5e0!3m2!1sid!2sid!4v1621234567890!5m2!1sid!2sid"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5194.5642165465!2d104.32477346012963!3d-2.880936989917987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b031054462161%3A0xed05d357ef579aa4!2sKantor%20Desa!5e0!3m2!1sen!2sid!4v1759804386834!5m2!1sen!2sid" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
@@ -126,8 +124,8 @@
         <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galeri Desa</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Momenn-momen indah dari desa kami</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galeri Desa Air Senggeris</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Dokumentasi agenda dan kegiatan desa Air Senggeris</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -175,7 +173,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-800">Alamat</h4>
-                                <p class="text-gray-600">Jalan Desa Air Senggeris, Kecamatan Betung, Kabupaten Banyuasin</p>
+                                <p class="text-gray-600">Jalan Desa Air Senggeris, Kecamatan Suak Tapeh, Kabupaten Banyuasin, Provinsi Sumatera Selatan</p>
                             </div>
                         </div>
 
@@ -205,7 +203,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-800">Jam Operasional</h4>
-                                <p class="text-gray-600">Senin - Jumat: 08:00 - 17:00</p>
+                                <p class="text-gray-600">Senin - Jumat: 08:00 - 16:00</p>
                             </div>
                         </div>
                     </div>
