@@ -4,13 +4,11 @@
 
 @section('content')
 
-
-
 <!-- Hero Banner -->
-<div class="mt-1 hero-section h-64 md:h-50 flex items-center justify-center bg-blue-900">
+<div class="mt-1 hero-section h-64 md:h-30 flex items-center justify-center bg-blue-900">
     <div class="text-center px-4 ">
-        <h2 class="text-xl md:text-3xl font-bold text-white mb-4">Profil Desa Air Senggeris</h2>
-        <p class="text-xl text-white max-w-3xl mx-auto">Membangun desa yang sejahtera, mandiri, berbudaya dan berdaya daya saing</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Profil Desa Air Senggeris</h2>
+        <p class="text-l text-white max-xl mx-auto">Membangun desa yang sejahtera, mandiri, berbudaya dan berdaya daya saing</p>
     </div>
 </div>
 
@@ -332,7 +330,6 @@
 
 <!-- Footer -->
 @endsection
-
 
 <script>
     feather.replace();

@@ -37,10 +37,10 @@
 @section('content')
     <section class="mt-1">
         {{-- Hero Section --}}
-        <div class="bg-blue-900 text-white py-10 hero-section h-64 md:h-37 flex items-center justify-center">
+        <div class="bg-blue-900 text-white py-10 hero-section h-64 md:h-30 flex items-center justify-center">
             <div class=" p-20 container mx-auto px-4 text-center">
-                <h1 class="text-xl md:text-4xl font-bold mb-4">Layanan Pengaduan Masyarakat</h1>
-                <p class="text-1xl text-blue-100 max-w-2xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan
+                <h1 class="text-xl md:text-3xl font-bold mb-4">Layanan Pengaduan Masyarakat</h1>
+                <p class="text-1xl text-blue-100 max-w-xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan
                     desa kita bersama</p>
             </div>
         </div>

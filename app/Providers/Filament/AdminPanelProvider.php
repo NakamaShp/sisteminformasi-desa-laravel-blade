@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Filament\Enums\ThemeMode;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -27,8 +28,11 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            // --- BARIS UNTUK MEMAKSA TEMA PUTIH (LIGHT MODE) ---
+            ->defaultThemeMode(ThemeMode::Light)
+            // --------------------------------------------------
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Blue, // Mengisi nilai Color yang kosong dengan contoh Indigo
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

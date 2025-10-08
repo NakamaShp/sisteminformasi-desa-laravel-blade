@@ -15,16 +15,16 @@
             <div>
                 <img src="{{ asset('images/gambar.jpeg') }}"
                     alt="gambar-1"
-                    class="w-[400vh] h-[75vh] object-cover">
+                    class="w-[400vh] h-[75vh] object-cover rounded">
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-16 bg-white">
+        <section id="about" class="py-15 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang Desa Air Senggeris</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Desa Air Senggeris adalah Desa yang terletak di Kecamatan Suak Tapeh, Kabupaten Banyuasin, Provinsi Sumatera Selatan </p>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Desa Air Senggeris adalah desa yang terletak di Kecamatan Suak Tapeh, Kabupaten Banyuasin, Provinsi Sumatera Selatan </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -56,7 +56,7 @@
         </section>
 
         <!-- Vision Mission Section -->
-        <section class="py-16 bg-gray-50">
+        <section class="py-4 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Visi dan Misi Desa</h2>
@@ -118,7 +118,7 @@
         </section>
 
         <!-- Gallery Section -->
-        <section class="py-16 bg-gray-50">
+        <section class="py-2 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galeri Desa Air Senggeris</h2>
@@ -155,7 +155,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="py-16 bg-white">
+        <section class="py-10 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
