@@ -12,6 +12,7 @@ use Filament\Actions\DeleteAction;
 
 class NewsCategoriesTable
 {
+    protected static ?string $navigationGroup = 'Berita';
     public static function configure(Table $table): Table
     {
         return $table

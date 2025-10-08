@@ -15,6 +15,7 @@ use Filament\Tables\Columns\ToggleColumn as ToogleColumn;
 
 class NewsTable
 {
+    protected static ?string $navigationGroup = 'Berita';
     public static function configure(Table $table): Table
     {
         return $table
@@ -37,7 +38,7 @@ class NewsTable
                     ->formatStateUsing(fn($state) => html_entity_decode(strip_tags($state))), // batasi hanya 50 karakter
                 ToogleColumn::make('is_featured')
                     ->label('Is Featured')
-                
+
 
 
             ])

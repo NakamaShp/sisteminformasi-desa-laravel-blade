@@ -13,8 +13,11 @@ use Filament\Tables\Columns\ImageColumn;
 
 class BannersTable
 {
+    protected static ?string $navigationGroup = 'Berita';
     public static function configure(Table $table): Table
     {
+
+
         return $table
             ->columns([
                 TextColumn::make('news.title')

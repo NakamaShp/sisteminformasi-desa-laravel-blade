@@ -28,6 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->darkMode(false)
             // --- BARIS UNTUK MEMAKSA TEMA PUTIH (LIGHT MODE) ---
             ->defaultThemeMode(ThemeMode::Light)
             // --------------------------------------------------
