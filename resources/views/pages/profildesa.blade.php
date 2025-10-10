@@ -7,7 +7,7 @@
 <!-- Hero Banner -->
 <div class="mt-1 hero-section h-64 md:h-30 flex items-center justify-center bg-blue-900">
     <div class="text-center px-4 ">
-        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Profil Desa Air Senggeris</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Profil Desa Air Senggeris</h2>
         <p class="text-l text-white max-xl mx-auto">Membangun desa yang sejahtera, mandiri, berbudaya dan berdaya daya saing</p>
     </div>
 </div>
@@ -18,7 +18,7 @@
     <section class="mb-16 fade-in">
         <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center relative pb-4">
             Profil Desa
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600 rounded-full"></span>
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-900 rounded-full"></span>
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -132,134 +132,135 @@
     </section>
 
       <!-- Struktur Organisasi Desa Section -->
-    <section class="mb-16 fade-in">
-        <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center relative pb-4">
-            Struktur Pemerintahan Desa Air Senggeris
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600 rounded-full"></span>
-        </h2>
+<section class="py-16 px-4 max-w-7xl mx-auto">
+    <h2 class="center text-3xl font-bold text-blue-900 mb-12 text-center relative">
+        Struktur Organisasi Pemerintahan<br>Desa Air Senggeris
+        <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600 rounded-full"></span>
+    </h2>
 
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-blue-100 p-8">
-            <!-- Kepala Desa -->
-            <div class="text-center mb-15">
-                <div class="flex flex-col items-center">
-                    <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-900 mb-4 shadow-lg">
-                        <img src="images/gambar.jpeg" alt="Kepala Desa" class="w-full h-full object-cover">
-                    </div>  
-                    <h3 class="text-xl font-semibold text-blue-900 mb-2">Kepala Desa</h3>
-                    <div class="bg-blue-900 text-white px-6 py-3 rounded-lg">
-                        <p class="font-bold">Bapak Ahmad Wijaya, S.Pd.</p>
-                    </div>
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-blue-100 p-8">
+        <!-- Kepala Desa -->
+        <div class="flex flex-col items-center justify-center mb-16">
+            <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-900 mb-5 shadow-lg">
+                <img src="images/gambar.jpeg" alt="Kepala Desa" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-900 mb-3">Kepala Desa</h3>
+            <div class="bg-blue-900 text-white px-6 py-3 rounded-lg">
+                <p class="font-bold">ARDIANSYAH</p>
+            </div>
+        </div>
+
+        <!-- Level Kedua -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="text-center">
+                <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Sekretaris Desa" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Sekretaris Desa</h4>
+                <div class="bg-blue-100 px-4 py-2 rounded-lg">
+                    <p class="font-medium">DAPIK IRAWAN, S.H.I.</p>
                 </div>
             </div>
-
-            <!-- Level Kedua -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                <div class="text-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Sekretaris Desa" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Sekretaris Desa</h4>
-                    <div class="bg-blue-100 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Ibu Siti Nurhaliza, S.E.</p>
-                    </div>
+            
+            <div class="text-center">
+                <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Kepala Urusan Keuangan" class="w-full h-full object-cover">
                 </div>
-                <div class="text-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Kepala Urusan Keuangan" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Keuangan</h4>
-                    <div class="bg-blue-100 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Bapak Budi Santoso, A.Md.</p>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Kepala Urusan Tata Usaha" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Tata Usaha</h4>
-                    <div class="bg-blue-100 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Ibu Dewi Lestari, S.Pd.</p>
-                    </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Keuangan</h4>
+                <div class="bg-blue-100 px-4 py-2 rounded-lg">
+                    <p class="font-medium">UTAMA UMAR.SP.D</p>
                 </div>
             </div>
-
-            <!-- Level Ketiga -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Kepala Seksi Pemerintahan" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Pemerintahan</h4>
-                    <div class="bg-blue-50 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Bapak Hendra Gunawan</p>
-                    </div>
+            
+            <div class="text-center">
+                <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Kepala Urusan Perencanaan" class="w-full h-full object-cover">
                 </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Kepala Seksi Kesejahteraan" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Kesejahteraan</h4>
-                    <div class="bg-blue-50 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Ibu Ratna Sari</p>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Kepala Seksi Pelayanan" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Pelayanan</h4>
-                    <div class="bg-blue-50 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Bapak Joko Prasetyo</p>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Kepala Seksi Pembangunan" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Pembangunan</h4>
-                    <div class="bg-blue-50 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Bapak Agus Setiawan</p>
-                    </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Perencanaan</h4>
+                <div class="bg-blue-100 px-4 py-2 rounded-lg">
+                    <p class="font-medium">ROSIHAN TAUPAN</p>
                 </div>
             </div>
-
-            <!-- BPD -->
-            <div class="text-center mb-15">
-                <div class="flex flex-col items-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-3 border-blue-500 mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Ketua BPD" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Badan Permusyawaratan Desa (BPD)</h4>
-                    <div class="bg-blue-50 px-6 py-3 rounded-lg">
-                        <p class="font-medium">Ketua: Bapak Muhammad Fadli</p>
-                    </div>
+            
+            <div class="text-center">
+                <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Kepala Urusan Tata Usaha" class="w-full h-full object-cover">
                 </div>
-            </div>
-
-            <!-- RW dan RT -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Ketua RW" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Ketua RW</h4>
-                    <div class="bg-gray-50 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Koordinator: Bapak Suryadi</p>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-3 shadow-md">
-                        <img src="images/gambar.jpeg" alt="Ketua RT" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Ketua RT</h4>
-                    <div class="bg-gray-50 px-4 py-3 rounded-lg">
-                        <p class="font-medium">Koordinator: Bapak Slamet Riyadi</p>
-                    </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Tata Usaha</h4>
+                <div class="bg-blue-100 px-4 py-2 rounded-lg">
+                    <p class="font-medium">FINA ANGGRAINI</p>
                 </div>
             </div>
         </div>
-    </section>
 
+        <!-- Level Ketiga -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <div class="text-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Kepala Seksi Pemerintahan" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Pemerintahan</h4>
+                <div class="bg-blue-50 px-4 py-2 rounded-lg">
+                    <p class="font-medium">NOPI ASRI</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Kepala Seksi Kesejahteraan" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Kesejahteraan</h4>
+                <div class="bg-blue-50 px-4 py-2 rounded-lg">
+                    <p class="font-medium">ANDI WASIS</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Kepala Seksi Pelayanan" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Pelayanan</h4>
+                <div class="bg-blue-50 px-4 py-2 rounded-lg">
+                    <p class="font-medium">DENI ANDRIADI</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BPD -->
+        <div class="flex flex-col items-center justify-center mb-16">
+            <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-500 mx-auto mb-4 shadow-md">
+                <img src="images/gambar.jpeg" alt="Ketua BPD" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-xl font-semibold text-blue-900 mb-3">Badan Permusyawaratan Desa (BPD)</h4>
+            <div class="bg-blue-50 px-6 py-2 rounded-lg">
+                <p class="font-medium">Ketua: SUBENDI</p>
+            </div>
+        </div>
+
+        <!-- RW dan RT -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="text-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-3 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Ketua RW" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Ketua Dusun I</h4>
+                <div class="bg-gray-50 px-4 py-2 rounded-lg">
+                    <p class="font-medium">TRI SUKARMAN</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-3 shadow-md">
+                    <img src="images/gambar.jpeg" alt="Ketua RT" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-lg font-semibold text-blue-900 mb-2">Ketua Dusun II</h4>
+                <div class="bg-gray-50 px-4 py-2 rounded-lg">
+                    <p class="font-medium">IRMAN HADI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Potensi Desa Section -->
     <section class="mb-16 fade-in">
         <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center relative pb-4">

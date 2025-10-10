@@ -8,7 +8,7 @@
         {{-- Hero Section --}}
         <div class="bg-blue-900 text-white py-10 hero-section h-64 md:h-30 flex items-center justify-center">
             <div class="p-20 container mx-auto px-4 text-center">
-                <h1 class="text-xl md:text-3xl font-bold mb-4">Layanan Pengaduan Masyarakat</h1>
+                <h1 class="text-xl md:text-3xl font-bold mb-2">Layanan Pengaduan Masyarakat</h1>
                 <p class="text-1xl text-blue-100 max-w-xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan desa kita bersama</p>
             </div>
         </div>
@@ -30,9 +30,10 @@
 
                         {{-- Nama Lengkap --}}
                         <div>
-                            <label for="nama_lengkap" class="block text-gray-700 font-medium mb-2">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <label for="nama_lengkap" class="block text-gray-700 font-medium mb-2 ">Nama Lengkap <span class="text-red-500">*</span></label>
                             <input type="text" id="nama_lengkap" name="nama_lengkap" required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Masukkan nama anda">
                             <div id="error-nama_lengkap" class="text-red-600 text-sm mt-1"></div>
                         </div>
 
@@ -49,7 +50,8 @@
                         <div>
                             <label for="email" class="block text-gray-700 font-medium mb-2">Email (Opsional)</label>
                             <input type="email" id="email" name="email"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Masukkan email anda">
                             <div id="error-email" class="text-red-600 text-sm mt-1"></div>
                         </div>
 
@@ -57,7 +59,8 @@
                         <div>
                             <label for="telepon" class="block text-gray-700 font-medium mb-2">Nomor Telepon <span class="text-red-500">*</span></label>
                             <input type="tel" id="telepon" name="telepon" required
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Masukkan nomor telepon">
                             <div id="error-telepon" class="text-red-600 text-sm mt-1"></div>
                         </div>
 
@@ -85,10 +88,27 @@
                         {{-- Lampiran --}}
                         <div>
                             <label for="lampiran" class="block text-gray-700 font-medium mb-2">Lampiran Dokumen (Opsional)</label>
-                            <input type="file" id="lampiran" name="lampiran" accept=".jpg,.jpeg,.png,.pdf"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg">
-                            <p class="text-xs text-gray-500 mt-1">Format: JPG, PNG, PDF. Max: 2MB</p>
-                            <div id="error-lampiran" class="text-red-600 text-sm mt-1"></div>
+                            
+                            <input 
+                                type="file" 
+                                id="lampiran" 
+                                name="lampiran" 
+                                accept=".jpg,.jpeg,.png,.pdf"
+                                class="
+                                    w-full 
+                                    text-sm text-gray-900 
+                                    border border-gray-300 
+                                    rounded
+                                    cursor-pointer 
+                                    bg-gray-50 
+                                    p-2.5 
+                                    file:mr-4 file:py-2 file:px-4 
+                                    file:rounded file:border-0
+                                    file:text-sm file:font-semibold
+                                    file:bg-gray-600 file:text-white
+                                    hover:file:bg-gray-700">
+                                    <p class="text-xs text-gray-600 mt-1">Format: JPG, PNG, PDF. Ukuran Maksimum: 2MB.</p>
+                                    <div id="error-lampiran" class="text-red-600 text-sm mt-1"></div>
                         </div>
 
                         {{-- Submit Button --}}

@@ -9,24 +9,28 @@
         <div class="container mx-auto px-8 py-1 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <div class="relative">
-                    <img src="images/logo-desa.jpg" alt="Logo Desa" class="rounded-full border-4 border-blue-600 w-10">
+                    <img src="images/logo-desa.jpg" alt="Logo Desa" class="rounded-full border-4 border-blue-900 w-10">
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold text-blue-800">Selamat Datang </h2>
-                    <h3 class="font-medium text-blue-800">Website Resmi Desa Air Senggeris</h3>
+                    <h2 class="text-xl font-bold text-blue-900">Selamat Datang </h2>
+                    <h3 class="font-medium text-blue-900">Website Resmi Desa Air Senggeris</h3>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-4 text-blue-800 font-medium">
+            <div class="flex items-center space-x-4 text-blue-900 font-medium">
                 <!-- Tanggal dan Waktu Dinamis -->
                 <div class="flex items-center space-x-2">
                     <i class="far fa-calendar-alt"></i>
                     <span id="currentDateTime"></span>
                 </div>
-
+                <!-- Ikon Login User -->
+                <div class="flex items-center space-x-2 ml-4 cursor-pointer hover:text-blue-600 transition-colors">
+                    <i class="fas fa-user-circle text-lg"></i>
+                    <span>Login</span>
+                </div>
             </div>
         </div>
-        </header>
+    </header>
 </section>
     
 <nav class="bg-blue-900 text-white sticky top-0 z-50" x-data="{ menuOpen: false }">

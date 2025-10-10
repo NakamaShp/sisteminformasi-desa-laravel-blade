@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Banner Slider Section -->
-    <section class="relative w-full h-[500px] overflow-hidden bg-gray-900"
+    <section class="relative w-full h-[550px] overflow-hidden bg-gray-900"
     x-data="{ 
         currentSlide: 0,
         banners: {{ $banners->count() }},
@@ -40,7 +40,7 @@
             
             <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
                 <div class="max-w-7xl mx-auto">
-                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl leading-tight">
+                    <h2 class="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-200 drop-shadow-2xl leading-tight">
                         {{ $banner->title }}
                     </h2>
                 </div>

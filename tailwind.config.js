@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Instrument Sans", "ui-sans-serif", "system-ui"],
+        sans: ["Instrument Sans", "ui-sans-serif", "open-sans"],
       },
     },
   },

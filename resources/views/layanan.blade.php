@@ -204,7 +204,7 @@
     <section class="py-16 bg-primary-900 text-black-900">
         <div class="container mx-auto px-4 text-center ">
             <h2 class="text-3xl font-bold mb-6">Formulir Layanan Desa</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Unduh formulir yang diperlukan untuk pengajuan layanan administrasi desa</p>
+            <p class="text-l mb-8 max-w-xl mx-auto">Unduh formulir yang diperlukan untuk pengajuan layanan administrasi desa</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div class="bg-white text-primary-900 p-6 rounded-lg shadow">
