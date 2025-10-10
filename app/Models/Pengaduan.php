@@ -17,8 +17,12 @@ class Pengaduan extends Model
         'kategori',
         'isi_pengaduan',
         'lampiran',
-
         'nomor_tiket',
-        'status',
+        'status'
+    ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
     ];
 }

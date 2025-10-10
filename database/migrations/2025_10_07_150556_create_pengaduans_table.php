@@ -14,18 +14,22 @@ return new class extends Migration
         Schema::create('pengaduans', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lengkap');
-            $table->string('nik', 16);
-            $table->string('email');
-            $table->string('telepon');
+            $table->string('nik', 16); // Tambah panjang maksimal
+            $table->string('email')->nullable(); // Sesuaikan dengan validasi controller
+            $table->string('telepon', 20);
             $table->string('kategori');
             $table->text('isi_pengaduan');
             $table->string('lampiran')->nullable();
-            $table->string('nomor_tiket')->unique();
+            $table->string('nomor_tiket', 20)->unique(); // Tambah panjang maksimal
             $table->enum('status', ['Pending', 'Diproses', 'Selesai'])->default('Pending');
             $table->timestamps();
+            
+            // Indexing untuk performa query yang lebih baik
+            $table->index('nomor_tiket');
+            $table->index('status');
+            $table->index('created_at');
         });
     }
-
 
     /**
      * Reverse the migrations.

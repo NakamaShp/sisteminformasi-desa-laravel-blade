@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {{-- Letakkan di dekat CDN SweetAlert --}}
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+     <!-- TAMBAHKAN 3 BARIS INI -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Website Desa')</title>
     @vite('resources/css/app.css')
 </head>
