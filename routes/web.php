@@ -2,12 +2,20 @@
 
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengaduanController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 // menu nav
-Route::get('/', function () {
-    return view('pages.homepage');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/layanan', function () {
+    return view('layanan');
 });
+
+// Route::get('/', function () {
+//     return view('pages.homepage');
+// });
 Route::get('/profildesa', function () {
     return view('pages.profildesa');
 });

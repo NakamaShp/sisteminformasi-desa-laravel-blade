@@ -1,12 +1,15 @@
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace(); // Perintah untuk memproses semua tag [data-feather]
+</script>
 
 <section class="bg-white shadow-md  ">
     <header>
         <div class="container mx-auto px-8 py-1 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <div class="relative">
-                    <img src="" alt="Logo Desa" class="rounded-full border-4 border-blue-600">
+                    <img src="images/logo-desa.jpg" alt="Logo Desa" class="rounded-full border-4 border-blue-600 w-10">
                 </div>
                 <div>
                     <h2 class="text-xl font-bold text-blue-800">Selamat Datang </h2>
@@ -47,9 +50,9 @@
                     <i class="fas fa-newspaper"></i>
                     <span>Portal Berita</span>
                 </a>
-                <a href="#" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
+                <a href="/layanan" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-info-circle"></i>
-                    <span>Informasi</span>
+                    <span>Informasi Layanan</span>
                 </a>
                 <a href="/pengaduan" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-book"></i>
@@ -114,4 +117,5 @@
 
     // Update setiap detik
     setInterval(updateDateTime, 1000);
+
 </script>

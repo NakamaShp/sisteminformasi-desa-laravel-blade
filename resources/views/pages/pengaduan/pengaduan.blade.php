@@ -157,32 +157,9 @@
                             <i data-feather="check-circle" class="mr-2"></i> Cek Status Pengaduan
                         </h2>
                         <div class="space-y-4">
-                            <div>
-                                <label for="ticketNumber" class="block text-gray-700 font-medium mb-2">Nomor Tiket
-                                    Pengaduan</label>
-                                <div class="flex">
-                                    <input type="text" id="ticketNumber" name="ticketNumber"
-                                        class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                        placeholder="Masukkan nomor tiket">
-                                    <button
-                                        class="bg-blue-900 text-white px-6 py-2 rounded-r-lg hover:bg-blue-800 transition">
-                                        Cek Status
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-                                <div class="flex">
-                                    <div class="flex-shrink-0">
-                                        <i data-feather="alert-triangle" class="h-5 w-5 text-yellow-400"></i>
-                                    </div>
-                                    <div class="ml-3">
-                                        <p class="text-sm text-yellow-700">
-                                            Nomor tiket pengaduan akan dikirimkan via email/SMS setelah pengaduan Anda
-                                            terverifikasi.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <button class="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800 transition">
+                                Cek Status
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -264,7 +241,7 @@
                                                             .replace(
                                                                 'bg-green-500',
                                                                 'bg-blue-600'
-                                                                );
+                                                            );
                                                     }, 2000);
                                                 });
                                         });

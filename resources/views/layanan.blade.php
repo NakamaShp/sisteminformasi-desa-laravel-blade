@@ -1,18 +1,17 @@
-@extends('layouts.header')
-
+@extends('layouts.layanan')
 
 @section('content')
 
  <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-primary-500 to-primary-900 text-white py-16">
+    <section class=" bg-gray-900 mt-1  text-white py-12">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Pelayanan Masyarakat Desa Air Senggeris</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Temukan berbagai layanan administrasi desa yang dapat anda akses secara mudah dan transparan</p>
+            <h2 class="text-3xl md:text-3xl font-bold mb-4">Pelayanan Masyarakat Desa Air Senggeris</h2>
+            <p class="text-xl mb-8 max-w-xl mx-auto">Temukan berbagai layanan administrasi desa yang dapat anda akses secara mudah dan transparan</p>
             <div class="flex justify-center space-x-4">
-                <button class="bg-white text-primary-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                <button class=" border bg-blue text-primary-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
                     <i data-feather="file-text" class="inline mr-2"></i> Panduan Layanan
                 </button>
-                <button class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition">
+                <button class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 hover:text-primary-900 transition">
                     <i data-feather="download" class="inline mr-2"></i> Formulir
                 </button>
             </div>
@@ -20,13 +19,13 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-primary-900 mb-12">Layanan Administratif</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Layanan Administratif</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service Card 1 -->
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                <div class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -43,7 +42,7 @@
                 </div>
 
                 <!-- Service Card 2 -->
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                <div class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -60,7 +59,7 @@
                 </div>
 
                 <!-- Service Card 3 -->
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                <div class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -77,7 +76,7 @@
                 </div>
 
                 <!-- Service Card 4 -->
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                <div class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -94,7 +93,7 @@
                 </div>
 
                 <!-- Service Card 5 -->
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                <div class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -111,7 +110,7 @@
                 </div>
 
                 <!-- Service Card 6 -->
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                <div class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -131,10 +130,14 @@
     </section>
 
     <!-- Service Guide Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        
+        <div class="flex flex-col md:flex-row items-stretch gap-8">
+            
+            {{-- Bagian Kiri: Panduan Layanan Desa --}}
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 h-full">
                     <h2 class="text-3xl font-bold text-primary-900 mb-4">Panduan Layanan Desa</h2>
                     <p class="text-secondary-500 mb-6">Pelajari langkah-langkah pengajuan berbagai layanan administrasi desa dengan panduan yang jelas dan mudah dipahami.</p>
                     <ul class="space-y-4">
@@ -159,43 +162,47 @@
                         <i data-feather="download" class="inline mr-2"></i> Unduh Panduan
                     </button>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                        <div class="flex items-center mb-4">
-                            <i data-feather="book-open" class="text-primary-900 w-8 h-8 mr-3"></i>
-                            <h3 class="text-xl font-semibold text-primary-900">Contoh Panduan</h3>
+            </div>
+            
+            {{-- Bagian Kanan: Contoh Panduan --}}
+            <div class="md:w-1/2">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 h-full">
+                    <div class="flex items-center mb-4">
+                        <i data-feather="book-open" class="text-primary-900 w-8 h-8 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-primary-900">Contoh Panduan</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-primary-50 rounded-lg">
+                            <h4 class="font-medium text-primary-900 mb-2">1. Surat Keterangan Domisili</h4>
+                            <ol class="list-decimal list-inside text-secondary-500 space-y-1 pl-4">
+                                <li>Isi formulir pengajuan</li>
+                                <li>Lampirkan fotokopi KTP dan KK</li>
+                                <li>Tunukkan dokumen asli untuk verifikasi</li>
+                                <li>Proses validasi oleh petugas</li>
+                                <li>Ambil surat di kantor desa</li>
+                            </ol>
                         </div>
-                        <div class="space-y-4">
-                            <div class="p-4 bg-primary-50 rounded-lg">
-                                <h4 class="font-medium text-primary-900 mb-2">1. Surat Keterangan Domisili</h4>
-                                <ol class="list-decimal list-inside text-secondary-500 space-y-1 pl-4">
-                                    <li>Isi formulir pengajuan</li>
-                                    <li>Lampirkan fotokopi KTP dan KK</li>
-                                    <li>Tunukkan dokumen asli untuk verifikasi</li>
-                                    <li>Proses validasi oleh petugas</li>
-                                    <li>Ambil surat di kantor desa</li>
-                                </ol>
-                            </div>
-                            <div class="p-4 bg-primary-50 rounded-lg">
-                                <h4 class="font-medium text-primary-900 mb-2">2. Kartu Keluarga Baru</h4>
-                                <ol class="list-decimal list-inside text-secondary-500 space-y-1 pl-4">
-                                    <li>Formulir permohonan</li>
-                                    <li>Surat nikah/cerai (jika ada perubahan)</li>
-                                    <li>Fotokopi KTP kepala keluarga</li>
-                                    <li>Verifikasi data oleh petugas</li>
-                                    <li>Pencetakan KK baru</li>
-                                </ol>
-                            </div>
+                        <div class="p-4 bg-primary-50 rounded-lg">
+                            <h4 class="font-medium text-primary-900 mb-2">2. Kartu Keluarga Baru</h4>
+                            <ol class="list-decimal list-inside text-secondary-500 space-y-1 pl-4">
+                                <li>Formulir permohonan</li>
+                                <li>Surat nikah/cerai (jika ada perubahan)</li>
+                                <li>Fotokopi KTP kepala keluarga</li>
+                                <li>Verifikasi data oleh petugas</li>
+                                <li>Pencetakan KK baru</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Download Section -->
-    <section class="py-16 bg-primary-900 text-white">
-        <div class="container mx-auto px-4 text-center">
+    <section class="py-16 bg-primary-900 text-black-900">
+        <div class="container mx-auto px-4 text-center ">
             <h2 class="text-3xl font-bold mb-6">Formulir Layanan Desa</h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto">Unduh formulir yang diperlukan untuk pengajuan layanan administrasi desa</p>
             
@@ -204,15 +211,15 @@
                     <i data-feather="file-text" class="w-10 h-10 mx-auto mb-4"></i>
                     <h3 class="font-semibold mb-2">Formulir Domisili</h3>
                     <p class="text-secondary-500 mb-4 text-sm">Untuk pengajuan surat keterangan domisili</p>
-                    <button class="text-primary-500 font-medium hover:text-primary-700 text-sm">
-                        <i data-feather="download" class="inline mr-1"></i> Unduh PDF
+                    <button class="text-primary-500 font-medium hover:text-sky-700 text-sm ">
+                        <i data-feather="download" class="inline mr-1 " ></i> Unduh PDF
                     </button>
                 </div>
                 <div class="bg-white text-primary-900 p-6 rounded-lg shadow">
                     <i data-feather="file-text" class="w-10 h-10 mx-auto mb-4"></i>
                     <h3 class="font-semibold mb-2">Formulir KK Baru</h3>
                     <p class="text-secondary-500 mb-4 text-sm">Untuk pembuatan kartu keluarga baru</p>
-                    <button class="text-primary-500 font-medium hover:text-primary-700 text-sm">
+                    <button class="text-primary-500 font-medium hover:text-sky-700 text-sm">
                         <i data-feather="download" class="inline mr-1"></i> Unduh PDF
                     </button>
                 </div>
@@ -220,13 +227,13 @@
                     <i data-feather="file-text" class="w-10 h-10 mx-auto mb-4"></i>
                     <h3 class="font-semibold mb-2">Formulir SKTM</h3>
                     <p class="text-secondary-500 mb-4 text-sm">Untuk pengajuan surat keterangan tidak mampu</p>
-                    <button class="text-primary-500 font-medium hover:text-primary-700 text-sm">
+                    <button class="text-primary-500 font-medium hover:text-sky-700 text-sm">
                         <i data-feather="download" class="inline mr-1"></i> Unduh PDF
                     </button>
                 </div>
             </div>
             
-            <button class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition">
+            <button class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-sky-700 hover:text-primary-900 transition">
                 <i data-feather="download-cloud" class="inline mr-2"></i> Lihat Semua Formulir
             </button>
         </div>
