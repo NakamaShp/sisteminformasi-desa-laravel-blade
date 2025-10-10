@@ -22,6 +22,8 @@ class AuthorsResource extends Resource
     protected static ?string $model = Author::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Users;
+    protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
+
 
     protected static ?string $recordTitleAttribute = 'Author';
 
@@ -46,8 +48,7 @@ class AuthorsResource extends Resource
     {
         return [
             'index' => ListAuthors::route('/'),
-            'create' => CreateAuthors::route('/create'),
-            'edit' => EditAuthors::route('/{record}/edit'),
+
         ];
     }
 }

@@ -25,6 +25,8 @@ class HomeBannerResource extends Resource
     protected static ?string $model = HomeBanner::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|\UnitEnum|null $navigationGroup = 'Halaman Depan';
+
 
     protected static ?string $recordTitleAttribute = 'title';
 

@@ -17,15 +17,16 @@ class PengaduansTable
     {
         return $table
             ->columns([
-                TextColumn::make('nomor_tiket')
-                    ->label('Nomor Tiket')
-                    ->searchable()
-                    ->copyable(),
                 TextColumn::make('nama_lengkap')
-                ->label('Nama Lengkap')
-                ->searchable(),
+                    ->label('Nama Lengkap')
+                    ->searchable(),
+                TextColumn::make('nik')
+                    ->label('NIK')
+                    ->searchable(),
                 TextColumn::make('kategori')
-                ->label('Kategori'),
+                    ->label('Kategori'),
+                TextColumn::make('isi_pengaduan')
+                    ->label('Isi Pengaduan'),
                 BadgeColumn::make('status')
                     ->label('Status')
                     ->colors([
@@ -36,15 +37,17 @@ class PengaduansTable
                 TextColumn::make('created_at')
                     ->label('Tanggal Pengaduan')
                     ->dateTime('d M Y H:i')
-                
+
             ])
             ->filters([
                 //
             ])
             ->recordActions([
-              
+
+                ViewAction::make(),
                 EditAction::make(),
-                
+                DeleteAction::make(),
+
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

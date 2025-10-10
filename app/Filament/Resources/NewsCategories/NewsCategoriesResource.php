@@ -22,6 +22,7 @@ class NewsCategoriesResource extends Resource
     protected static ?string $model = NewsCategory::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Tag;
+    protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
 
     protected static ?string $recordTitleAttribute = 'NewsCategory';
 
@@ -46,8 +47,7 @@ class NewsCategoriesResource extends Resource
     {
         return [
             'index' => ListNewsCategories::route('/'),
-            'create' => CreateNewsCategories::route('/create'),
-            'edit' => EditNewsCategories::route('/{record}/edit'),
+
         ];
     }
 }

@@ -19,7 +19,10 @@ class PengaduanResource extends Resource
 {
     protected static ?string $model = Pengaduan::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::ChatBubbleLeft;
+
+    protected static ?string $navigationLabel = 'Pengaduan';
+    protected static string|\UnitEnum|null $navigationGroup = 'Layanan Desa';
 
     public static function form(Schema $schema): Schema
     {
@@ -42,8 +45,7 @@ class PengaduanResource extends Resource
     {
         return [
             'index' => ListPengaduans::route('/'),
-          
-            'edit' => EditPengaduan::route('/{record}/edit'),
+
         ];
     }
 }

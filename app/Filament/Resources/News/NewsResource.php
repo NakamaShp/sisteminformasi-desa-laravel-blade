@@ -22,7 +22,7 @@ class NewsResource extends Resource
     protected static ?int $navigationSort = 1;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Newspaper;
-
+    protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
 
 
     protected static ?string $recordTitleAttribute = 'News';
@@ -48,8 +48,8 @@ class NewsResource extends Resource
     {
         return [
             'index' => ListNews::route('/'),
-            'create' => CreateNews::route('/create'),
-            'edit' => EditNews::route('/{record}/edit'),
+
+
         ];
     }
 }
