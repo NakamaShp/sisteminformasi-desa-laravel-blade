@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pengaduans', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lengkap');
-            $table->string('nik', 16)->unique();
+            $table->string('nik', 16);
             $table->string('email');
             $table->string('telepon');
             $table->string('kategori');

@@ -22,6 +22,7 @@ class BannersResource extends Resource
     protected static ?string $model = Banner::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Photo;
+    protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
 
     protected static ?string $recordTitleAttribute = 'Banner';
 
@@ -46,8 +47,7 @@ class BannersResource extends Resource
     {
         return [
             'index' => ListBanners::route('/'),
-            'create' => CreateBanners::route('/create'),
-            'edit' => EditBanners::route('/{record}/edit'),
+
         ];
     }
 }

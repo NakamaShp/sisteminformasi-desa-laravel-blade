@@ -37,11 +37,11 @@ class PengaduanForm
                     ->disabled(),
                 Select::make('kategori')
                     ->options([
-                        'Infrastruktur' => 'Infrastruktur Desa',
-                        'Kesehatan' => 'Kesehatan',
-                        'Pendidikan' => 'Pendidikan',
-                        'Lingkungan' => 'Lingkungan',
-                        'Keamanan' => 'Keamanan',
+                        'Infrastruktur Desa' => 'Infrastruktur Desa',
+                        'Lingkungan Hidup' => 'Lingkungan Hidup',
+                        'Masalah Sosial' => 'Masalah Sosial',
+                        'Pendidikan Masyarakat' => 'Pendidikan Masyarakat',
+                        'Keamanan Masyarakat' => 'Keamanan Masyarakat',
                         'Lainnya' => 'Lainnya',
                     ])
                     ->label('Kategori')

@@ -11,7 +11,15 @@ class PengaduanController extends Controller
     // ... method create() Anda ...
     public function create()
     {
-        return view('pages.pengaduan.pengaduan');
+        $categories = [
+            'Infrastruktur Desa',
+            'Lingkungan Hidup',
+            'Masalah Sosial',
+            'Pendidikan Masyarakat',
+            'Keamanan Masyarakat',
+            'Lainnya',
+        ];
+        return view('pages.pengaduan.pengaduan', compact('categories'));
     }
 
     public function store(Request $request)
@@ -25,6 +33,7 @@ class PengaduanController extends Controller
             'isi_pengaduan' => 'required|string',
             'lampiran'      => 'nullable|file|mimes:jpg,png,pdf|max:2048',
         ]);
+
 
         $nomorTiket = 'TKT-' . strtoupper(Str::random(8));
 

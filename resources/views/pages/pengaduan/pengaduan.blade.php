@@ -90,11 +90,9 @@
                             <select id="kategori" name="kategori" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                 <option value="">Pilih Kategori</option>
-                                <option value="infrastruktur">Infrastruktur Desa</option>
-                                <option value="pelayanan">Pelayanan Publik</option>
-                                <option value="lingkungan">Lingkungan Hidup</option>
-                                <option value="sosial">Masalah Sosial</option>
-                                <option value="lainnya">Lainnya</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category }}">{{ $category }}</option>
+                                @endforeach
                             </select>
                             <div id="kategori-error" class="text-red-600 text-sm mt-1"></div>
                         </div>
@@ -152,6 +150,7 @@
                         </div>
                     </div>
 
+
                     <div class="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
                         <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
                             <i data-feather="check-circle" class="mr-2"></i> Cek Status Pengaduan
@@ -162,9 +161,10 @@
                             </button>
                         </div>
                     </div>
-                </section>
             </div>
-        </main>
+    </section>
+    </div>
+    </main>
     </section>
 @endsection
 
@@ -243,7 +243,9 @@
                                                                 'bg-blue-600'
                                                             );
                                                     }, 2000);
-                                                });
+                                                }); >>>
+                                            >>> >
+                                            62220 a1cb489474232956ca8da1bc445c953d3d6
                                         });
                                 }
                             });
