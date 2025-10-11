@@ -4,61 +4,76 @@
     feather.replace(); // Perintah untuk memproses semua tag [data-feather]
 </script>
 
-<section class="bg-white shadow-md  ">
+<section class="bg-white shadow-md">
     <header>
-        <div class="container mx-auto px-8 py-1 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
+        {{-- Kontainer Utama: flex-col (Vertikal) di Mobile, flex-row (Horizontal) di Desktop --}}
+        <div class="container mx-auto px-4 py-1 flex flex-col md:flex-row md:justify-between md:items-center">
+
+            {{-- BARIS 1 (MOBILE): Logo dan Teks Judul (Kiri) --}}
+            {{-- Default: Tetap di kiri (align-start) dan berikan jarak bawah --}}
+            <div class="flex items-center space-x-2 mb-2 md:mb-2 mt-2">
                 <div class="relative">
-                    <img src="images/logo-desa.jpg" alt="Logo Desa" class="rounded-full border-4 border-blue-900 w-10">
+                    <img src="images/logo-desa.jpg" alt="Logo Desa"
+                        class="rounded-full border-4 border-blue-900 w-10 md:w-12 lg:w-10">
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold text-blue-900">Selamat Datang </h2>
-                    <h3 class="font-medium text-blue-900">Website Resmi Desa Air Senggeris</h3>
+                    {{-- Teks dikecilkan untuk mobile agar tidak memakan banyak ruang --}}
+                    <h2 class="text-lg md:text-2xl font-bold text-blue-900 leading-tight mb-1">Selamat Datang</h2>
+                    <h3 class="text-base font-semibold text-blue-900 leading-tight">Website Resmi Desa Air Senggeris</h3>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-4 text-blue-900 font-medium">
-                <!-- Tanggal dan Waktu Dinamis -->
-                <div class="flex items-center space-x-2">
+            {{-- BARIS 2 (MOBILE): Tanggal (Kiri) dan Login (Kanan) --}}
+            {{-- PENTING: w-full agar mengisi penuh lebar kontainer, dan justify-between untuk memisahkan elemen --}}
+            <div
+                class="w-full flex justify-between items-center text-blue-900 font-medium text-sm md:w-auto md:space-x-4 md:text-base mb-2 mt-2">
+
+                {{-- Gunakan space-x-1 untuk merapatkan ikon dan teks di mobile --}}
+                <div class="flex items-center space-x-1">
                     <i class="far fa-calendar-alt"></i>
                     <span id="currentDateTime"></span>
                 </div>
-                <!-- Ikon Login User -->
-                <div class="flex items-center space-x-2 ml-4 cursor-pointer hover:text-blue-600 transition-colors">
+
+                <a href="#"
+                    class="flex items-center space-x-2 cursor-pointer hover:text-blue-600 transition-colors">
                     <i class="fas fa-user-circle text-lg"></i>
                     <span>Login</span>
-                </div>
+                </a>
             </div>
         </div>
     </header>
 </section>
-    
+
 <nav class="bg-blue-900 text-white sticky top-0 z-50" x-data="{ menuOpen: false }">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-2">
-            
+
             <!-- Kiri: Menu Navigasi -->
-            <div 
-                :class="menuOpen ? 'block' : 'hidden'" 
+            <div :class="menuOpen ? 'block' : 'hidden'"
                 class="w-full md:flex md:items-center md:space-x-6 md:w-auto absolute md:static left-0 top-full bg-blue-900 md:bg-transparent px-4 md:px-0">
-                
-                <a href="/" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
+
+                <a href="/"
+                    class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="/profildesa" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
+                <a href="/profildesa"
+                    class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-user"></i>
                     <span>Profil Desa</span>
                 </a>
-                <a href="/berita" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
+                <a href="/berita"
+                    class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-newspaper"></i>
                     <span>Portal Berita</span>
                 </a>
-                <a href="/layanan" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
+                <a href="/layanan"
+                    class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-info-circle"></i>
                     <span>Informasi Layanan</span>
                 </a>
-                <a href="/pengaduan" class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
+                <a href="/pengaduan"
+                    class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-book"></i>
                     <span>Pengaduan</span>
                 </a>
@@ -74,8 +89,7 @@
             </div>
 
             <!-- Tombol Menu Mobile -->
-            <button 
-                @click="menuOpen = !menuOpen"
+            <button @click="menuOpen = !menuOpen"
                 class="md:hidden p-2 hover:bg-blue-700 rounded transition duration-300">
                 <i class="fas fa-bars"></i>
             </button>
@@ -121,5 +135,4 @@
 
     // Update setiap detik
     setInterval(updateDateTime, 1000);
-
 </script>

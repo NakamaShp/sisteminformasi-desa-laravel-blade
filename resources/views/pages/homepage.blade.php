@@ -5,8 +5,7 @@
 @section('content')
 
     <!-- Banner Slider Section -->
-    <section class="relative w-full h-[550px] overflow-hidden bg-gray-900"
-    x-data="{ 
+    <section class="relative w-full h-[450px] overflow-hidden bg-gray-900" x-data="{
         currentSlide: 0,
         banners: {{ $banners->count() }},
         init() {
@@ -21,66 +20,67 @@
             // Logic for looping slides
             this.currentSlide = (index + this.banners) % this.banners;
         }
-    }"
-    x-init="init">
-    @if($banners->count() > 0)
-    <div class="slider-container relative w-full h-full">
-        @foreach($banners as $index => $banner)
-        <div class="slide absolute w-full h-full transition-opacity duration-700 ease-in-out" 
-            :class="{ 
-                'opacity-100 z-10': {{ $index }} === currentSlide, 
-                'opacity-0 z-0': {{ $index }} !== currentSlide 
-            }">
-            
-            <img src="{{ asset('storage/' . $banner->image) }}" 
-                alt="{{ $banner->title }}" 
-                class="w-full h-full object-cover">
-            
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-            
-            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
-                <div class="max-w-7xl mx-auto">
-                    <h2 class="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-200 drop-shadow-2xl leading-tight">
-                        {{ $banner->title }}
-                    </h2>
-                </div>
+    }" x-init="init">
+        @if ($banners->count() > 0)
+            <div class="slider-container relative w-full h-full">
+                @foreach ($banners as $index => $banner)
+                    <div class="slide absolute w-full h-full transition-opacity duration-700 ease-in-out"
+                        :class="{
+                            'opacity-100 z-10': {{ $index }} === currentSlide,
+                            'opacity-0 z-0': {{ $index }} !== currentSlide
+                        }">
+
+                        <img src="{{ asset('storage/' . $banner->image) }}" alt="{{ $banner->title }}"
+                            class="w-full h-full object-cover">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+                        <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
+                            <div class="max-w-7xl mx-auto">
+                                <h2
+                                    class="text-2xl md:text-2xl lg:text-4xl font-bold text-gray-200 drop-shadow-2xl leading-tight">
+                                    {{ $banner->title }}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
-        </div>
-        @endforeach
-    </div>
 
-    @if($banners->count() > 1)
-    <button @click="goToSlide(currentSlide - 1)" 
-        class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-20 group">
-        <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-        </svg>
-    </button>
-    <button @click="goToSlide(currentSlide + 1)" 
-        class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-20 group">
-        <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-    </button>
+            @if ($banners->count() > 1)
+                <button @click="goToSlide(currentSlide - 1)"
+                    class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-20 group">
+                    <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button @click="goToSlide(currentSlide + 1)"
+                    class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 md:p-4 rounded-full transition-all duration-300 backdrop-blur-sm z-20 group">
+                    <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
 
-    <div class="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 z-20">
-        @foreach($banners as $index => $banner)
-        <button @click="goToSlide({{ $index }})" 
-            :class="{ 
-                'bg-white w-8 md:w-10': {{ $index }} === currentSlide, 
-                'bg-white/50 hover:bg-white/75': {{ $index }} !== currentSlide 
-            }"
-            class="w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300"
-            aria-label="Go to slide {{ $index + 1 }}">
-        </button>
-        @endforeach
-    </div>
-    @endif
-    @else
-    <div class="flex flex-col items-center justify-center h-full bg-gradient-to-br from-gray-800 to-gray-900">
-        </div>
-    @endif
-</section>
+                <div class="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 z-20">
+                    @foreach ($banners as $index => $banner)
+                        <button @click="goToSlide({{ $index }})"
+                            :class="{
+                                'bg-white w-8 md:w-10': {{ $index }} === currentSlide,
+                                'bg-white/50 hover:bg-white/75': {{ $index }} !== currentSlide
+                            }"
+                            class="w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300"
+                            aria-label="Go to slide {{ $index + 1 }}">
+                        </button>
+                    @endforeach
+                </div>
+            @endif
+        @else
+            <div class="flex flex-col items-center justify-center h-full bg-gradient-to-br from-gray-800 to-gray-900">
+            </div>
+        @endif
+    </section>
 
     <!-- About Section -->
     <section id="about" class="py-15 bg-white">
@@ -300,4 +300,3 @@
     <!-- Footer -->
 @endsection
 </section>
-

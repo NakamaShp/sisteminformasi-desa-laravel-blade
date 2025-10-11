@@ -4,13 +4,21 @@
 
 @section('content')
 
+<style>
+    /* Tambahkan ini di dalam tag <style> */
+@media (min-width: 1024px) {
+    .desktop-adjust {
+        margin-top: -2rem;  /* Sesuaikan nilai ini */
+        padding-top: 1rem;
+    }
+}
+</style>
 <!-- Main Content -->
-<main class="container mx-auto py-3 px-8 max-w-7xl">
-
+<main class="container pt-18 pb-3 px-8 max-w-7xl"> {{-- Hilangkan mt-8 --}}
 
     <!-- Featured News Banner -->
-    <section class="hero-section h-64 md:h-[400px] flex mb-8 items-center justify-center relative">
-    <div class="relative rounded overflow-hidden shadow-lg w-full max-w-5xl mx-auto h-[400px]"> {{-- Tambahkan h-[400px] di sini --}}
+    <section class="hero-section h-64 md:h-[430px] flex mb-12 items-center justify-center relative pt-8 md:pt-0 dekstop-adjust"> {{-- Tambahkan pt-8 untuk mobile --}}
+    <div class="relative rounded overflow-hidden shadow-lg w-full max-w-6xl mx-auto h-[430px]"> {{-- Tambahkan h-[400px] di sini --}}
 
         {{-- Slideshow Container --}}
         {{-- Kontainer tunggal untuk semua slide --}}
@@ -24,7 +32,7 @@
                     <a href="{{ route('news.show', $banner->news->slug) }}">
                         <img src="{{ asset('storage/' . $banner->news->thumbnail) }}"
                              alt="{{$banner->news->title}}"
-                             class="w-full h-[400px] object-cover min-w-full">
+                             class="w-full h-[430px] object-cover min-w-full">
                         <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-end p-6">
                             <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">{{$banner->news->title}}</h2>
                             <p class="text-white/90 line-clamp-2">{{$banner->news->description}}</p> {{-- Tambahkan line-clamp-2 untuk deskripsi --}}
@@ -67,7 +75,7 @@
 </section>
 
     <!-- News Grid -->
-    <section class="mb-8">
+    <section class="mb-12 md:mb-2 py-20 md:py-0">  
         <h2 class="text-2xl font-bold text-gray-800 mb-2">Berita Desa</h2>
         <p class="font-medium text-gray-800 mb-8">Menyajikan informasi terbaru tentang peristiwa, berita
             terkini, dan artikel-artikel jurnalistik dari Desa Air Senggeris</p>
@@ -110,7 +118,7 @@
     </section>
 
     <!-- Load More Button -->
-    <div class="text-center my-12">
+    <div class="text-center my-12 mt-8">
         <button
             class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
             Muat Lebih Banyak Berita

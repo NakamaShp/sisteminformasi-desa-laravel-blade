@@ -9,7 +9,8 @@
         <div class="bg-blue-900 text-white py-10 hero-section h-64 md:h-30 flex items-center justify-center">
             <div class="p-20 container mx-auto px-4 text-center">
                 <h1 class="text-xl md:text-3xl font-bold mb-2">Layanan Pengaduan Masyarakat</h1>
-                <p class="text-1xl text-blue-100 max-w-xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan desa kita bersama</p>
+                <p class="text-1xl text-blue-100 max-w-xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan
+                    desa kita bersama</p>
             </div>
         </div>
 
@@ -20,17 +21,21 @@
                 <section class="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
                     <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                            </path>
                         </svg>
                         Form Pengaduan
                     </h2>
 
-                    <form id="complaintForm" action="{{ route('pengaduan.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
+                    <form id="complaintForm" action="{{ route('pengaduan.store') }}" method="POST"
+                        enctype="multipart/form-data" class="space-y-6">
                         @csrf
 
                         {{-- Nama Lengkap --}}
                         <div>
-                            <label for="nama_lengkap" class="block text-gray-700 font-medium mb-2 ">Nama Lengkap <span class="text-red-500">*</span></label>
+                            <label for="nama_lengkap" class="block text-gray-700 font-medium mb-2 ">Nama Lengkap <span
+                                    class="text-red-500">*</span></label>
                             <input type="text" id="nama_lengkap" name="nama_lengkap" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Masukkan nama anda">
@@ -39,7 +44,8 @@
 
                         {{-- NIK --}}
                         <div>
-                            <label for="nik" class="block text-gray-700 font-medium mb-2">NIK <span class="text-red-500">*</span></label>
+                            <label for="nik" class="block text-gray-700 font-medium mb-2">NIK <span
+                                    class="text-red-500">*</span></label>
                             <input type="text" id="nik" name="nik" required maxlength="16"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="16 digit nomor NIK">
@@ -57,7 +63,8 @@
 
                         {{-- Telepon --}}
                         <div>
-                            <label for="telepon" class="block text-gray-700 font-medium mb-2">Nomor Telepon <span class="text-red-500">*</span></label>
+                            <label for="telepon" class="block text-gray-700 font-medium mb-2">Nomor Telepon <span
+                                    class="text-red-500">*</span></label>
                             <input type="tel" id="telepon" name="telepon" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Masukkan nomor telepon">
@@ -66,7 +73,8 @@
 
                         {{-- Kategori --}}
                         <div>
-                            <label for="kategori" class="block text-gray-700 font-medium mb-2">Kategori Pengaduan <span class="text-red-500">*</span></label>
+                            <label for="kategori" class="block text-gray-700 font-medium mb-2">Kategori Pengaduan <span
+                                    class="text-red-500">*</span></label>
                             <select id="kategori" name="kategori" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                 <option value="">Pilih Kategori</option>
@@ -79,7 +87,8 @@
 
                         {{-- Isi Pengaduan --}}
                         <div>
-                            <label for="isi_pengaduan" class="block text-gray-700 font-medium mb-2">Isi Pengaduan <span class="text-red-500">*</span></label>
+                            <label for="isi_pengaduan" class="block text-gray-700 font-medium mb-2">Isi Pengaduan <span
+                                    class="text-red-500">*</span></label>
                             <textarea id="isi_pengaduan" name="isi_pengaduan" rows="5" required
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                             <div id="error-isi_pengaduan" class="text-red-600 text-sm mt-1"></div>
@@ -87,13 +96,10 @@
 
                         {{-- Lampiran --}}
                         <div>
-                            <label for="lampiran" class="block text-gray-700 font-medium mb-2">Lampiran Dokumen (Opsional)</label>
-                            
-                            <input 
-                                type="file" 
-                                id="lampiran" 
-                                name="lampiran" 
-                                accept=".jpg,.jpeg,.png,.pdf"
+                            <label for="lampiran" class="block text-gray-700 font-medium mb-2">Lampiran Dokumen
+                                (Opsional)</label>
+
+                            <input type="file" id="lampiran" name="lampiran" accept=".jpg,.jpeg,.png,.pdf"
                                 class="
                                     w-full 
                                     text-sm text-gray-900 
@@ -107,8 +113,8 @@
                                     file:text-sm file:font-semibold
                                     file:bg-gray-600 file:text-white
                                     hover:file:bg-gray-700">
-                                    <p class="text-xs text-gray-600 mt-1">Format: JPG, PNG, PDF. Ukuran Maksimum: 2MB.</p>
-                                    <div id="error-lampiran" class="text-red-600 text-sm mt-1"></div>
+                            <p class="text-xs text-gray-600 mt-1">Format: JPG, PNG, PDF. Ukuran Maksimum: 2MB.</p>
+                            <div id="error-lampiran" class="text-red-600 text-sm mt-1"></div>
                         </div>
 
                         {{-- Submit Button --}}
@@ -181,7 +187,7 @@
         // Tunggu DOM ready
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM Ready!');
-            
+
             const form = document.getElementById('complaintForm');
             const btn = document.getElementById('submitBtn');
 
@@ -207,61 +213,61 @@
                 const formData = new FormData(form);
 
                 // Send AJAX request
-                fetch('{{ route("pengaduan.store") }}', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Response:', data);
+                fetch('{{ route('pengaduan.store') }}', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Response:', data);
 
-                    if (data.success) {
-                        // SUCCESS - Show SweetAlert
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Pengaduan Terkirim!',
-                            html: `
+                        if (data.success) {
+                            // SUCCESS - Show SweetAlert
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Pengaduan Terkirim!',
+                                html: `
                                 <p class="mb-4">Terima kasih, pengaduan Anda telah kami terima.</p>
                                 <div class="bg-blue-50 border-2 border-blue-200 p-4 rounded-lg">
                                     <p class="text-sm text-gray-600 mb-2">Nomor Tiket Anda:</p>
                                     <p class="text-2xl font-bold text-blue-900">${data.ticket_number}</p>
                                 </div>
                             `,
-                            confirmButtonColor: '#1e3a8a',
-                            confirmButtonText: 'OK'
-                        });
+                                confirmButtonColor: '#1e3a8a',
+                                confirmButtonText: 'OK'
+                            });
 
-                        // Reset form
-                        form.reset();
-                    } else {
-                        // Validation errors
-                        if (data.errors) {
-                            for (let field in data.errors) {
-                                const errorDiv = document.getElementById('error-' + field);
-                                if (errorDiv) {
-                                    errorDiv.textContent = data.errors[field][0];
+                            // Reset form
+                            form.reset();
+                        } else {
+                            // Validation errors
+                            if (data.errors) {
+                                for (let field in data.errors) {
+                                    const errorDiv = document.getElementById('error-' + field);
+                                    if (errorDiv) {
+                                        errorDiv.textContent = data.errors[field][0];
+                                    }
                                 }
                             }
                         }
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Terjadi Kesalahan',
-                        text: 'Gagal mengirim pengaduan. Silakan coba lagi.'
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Terjadi Kesalahan',
+                            text: 'Gagal mengirim pengaduan. Silakan coba lagi.'
+                        });
+                    })
+                    .finally(() => {
+                        // Re-enable button
+                        btn.disabled = false;
+                        btn.textContent = 'Kirim Pengaduan';
                     });
-                })
-                .finally(() => {
-                    // Re-enable button
-                    btn.disabled = false;
-                    btn.textContent = 'Kirim Pengaduan';
-                });
             });
         });
     </script>
