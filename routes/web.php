@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\HomeController;
@@ -37,3 +38,8 @@ Route::get('/berita/{slug}', [NewsController::class, 'show'])->name('news.show')
 // pengaduan
 Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
 Route::get('/pengaduan', [PengaduanController::class, 'create'])->name('pengaduan.create');
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+
+
