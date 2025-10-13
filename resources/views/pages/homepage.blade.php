@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.web')
 
 @section('title', 'Beranda - Website Desa Air Senggeris')
 
@@ -83,7 +83,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-15 bg-white">
+    <section id="about" class="py-12 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang Desa Air Senggeris</h2>

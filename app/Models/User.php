@@ -6,21 +6,44 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        // Untuk panel admin, hanya izinkan jika is_admin = true
+        if ($panel->getId() === 'admin') {
+            return $this->is_admin === true;
+        }
+
+        return true;
+    }
 
     /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
      */
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
     protected $fillable = [
         'name',
         'email',
         'password',
+        'is_admin',
+    ];
+
+    protected $casts = [
+        'is_admin' => 'boolean',
     ];
 
     /**

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.web')
 
 @section('title', $news->title)
 

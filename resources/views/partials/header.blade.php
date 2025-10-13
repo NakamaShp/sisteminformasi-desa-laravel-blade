@@ -13,7 +13,7 @@
             {{-- Default: Tetap di kiri (align-start) dan berikan jarak bawah --}}
             <div class="flex items-center space-x-2 mb-2 md:mb-2 mt-2">
                 <div class="relative">
-                    <img src="images/logo-desa.jpg" alt="Logo Desa"
+                    <img src="{{ asset('images/logo-desa.jpg') }}" alt="Logo Desa"
                         class="rounded-full border-4 border-blue-900 w-10 md:w-12 lg:w-10">
                 </div>
                 <div>
@@ -34,11 +34,21 @@
                     <span id="currentDateTime"></span>
                 </div>
 
-                <a href="#"
-                    class="flex items-center space-x-2 cursor-pointer hover:text-blue-600 transition-colors">
-                    <i class="fas fa-user-circle text-lg"></i>
-                    <span>Login</span>
-                </a>
+                @auth
+                    <a href="/dashboard" class="flex items-center space-x-2 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-user-circle text-lg"></i>
+                        <span>{{ auth()->user()->name }}</span>
+                    </a>
+                @else
+                    {{-- Jika user belum login --}}
+                    <a href="{{ route('login') }}"
+                        class="flex items-center space-x-2 cursor-pointer hover:text-blue-600 transition-colors">
+                        <i class="fas fa-user-circle text-lg"></i>
+                        <span>Login</span>
+                    </a>
+                @endauth
+
+
             </div>
         </div>
     </header>
@@ -67,7 +77,7 @@
                     <i class="fas fa-newspaper"></i>
                     <span>Portal Berita</span>
                 </a>
-                <a href="/layanan"
+                <a href="/pengajuan_surat/layanan"
                     class="flex items-center space-x-1 text-sm hover:bg-blue-700 px-3 py-2 rounded transition duration-300">
                     <i class="fas fa-info-circle"></i>
                     <span>Informasi Layanan</span>

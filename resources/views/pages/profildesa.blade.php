@@ -1,14 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.web')
 
 @section('title', 'Profil Desa - Desa Harmoni Nusantara')
 
 @section('content')
 
 <!-- Hero Banner -->
-<div class="mt-1 hero-section h-64 md:h-30 flex items-center justify-center bg-blue-900">
+<div class="mt-1 hero-section h-36 md:h-30 flex items-center justify-center bg-blue-900">
     <div class="text-center px-4 ">
         <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Profil Desa Air Senggeris</h2>
-        <p class="text-l text-white max-xl mx-auto">Membangun desa yang sejahtera, mandiri, berbudaya dan berdaya daya saing</p>
+        <p class="text-lg text-white max-xl mx-auto">Membangun desa yang sejahtera, mandiri, berbudaya dan berdaya daya saing</p>
     </div>
 </div>
 
@@ -142,7 +142,7 @@
         <!-- Kepala Desa -->
         <div class="flex flex-col items-center justify-center mb-16">
             <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-900 mb-5 shadow-lg">
-                <img src="images/gambar.jpeg" alt="Kepala Desa" class="w-full h-full object-cover">
+                <img src="images/profil.jpg" alt="Kepala Desa" class="w-full h-full object-cover">
             </div>
             <h3 class="text-2xl font-semibold text-blue-900 mb-3">Kepala Desa</h3>
             <div class="bg-blue-900 text-white px-6 py-3 rounded-lg">
@@ -154,7 +154,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div class="text-center">
                 <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Sekretaris Desa" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Sekretaris Desa" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Sekretaris Desa</h4>
                 <div class="bg-blue-100 px-4 py-2 rounded-lg">
@@ -164,7 +164,7 @@
             
             <div class="text-center">
                 <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Kepala Urusan Keuangan" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Kepala Urusan Keuangan" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Keuangan</h4>
                 <div class="bg-blue-100 px-4 py-2 rounded-lg">
@@ -174,7 +174,7 @@
             
             <div class="text-center">
                 <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Kepala Urusan Perencanaan" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Kepala Urusan Perencanaan" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Perencanaan</h4>
                 <div class="bg-blue-100 px-4 py-2 rounded-lg">
@@ -184,7 +184,7 @@
             
             <div class="text-center">
                 <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-600 mx-auto mb-4 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Kepala Urusan Tata Usaha" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Kepala Urusan Tata Usaha" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Urusan Tata Usaha</h4>
                 <div class="bg-blue-100 px-4 py-2 rounded-lg">
@@ -197,7 +197,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <div class="text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Kepala Seksi Pemerintahan" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Kepala Seksi Pemerintahan" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Pemerintahan</h4>
                 <div class="bg-blue-50 px-4 py-2 rounded-lg">
@@ -207,7 +207,7 @@
             
             <div class="text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Kepala Seksi Kesejahteraan" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Kepala Seksi Kesejahteraan" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Kesejahteraan</h4>
                 <div class="bg-blue-50 px-4 py-2 rounded-lg">
@@ -217,7 +217,7 @@
             
             <div class="text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-400 mx-auto mb-3 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Kepala Seksi Pelayanan" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Kepala Seksi Pelayanan" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Kepala Seksi Pelayanan</h4>
                 <div class="bg-blue-50 px-4 py-2 rounded-lg">
@@ -229,7 +229,7 @@
         <!-- BPD -->
         <div class="flex flex-col items-center justify-center mb-16">
             <div class="w-28 h-28 rounded-full overflow-hidden border-3 border-blue-500 mx-auto mb-4 shadow-md">
-                <img src="images/gambar.jpeg" alt="Ketua BPD" class="w-full h-full object-cover">
+                <img src="images/profil.jpg" alt="Ketua BPD" class="w-full h-full object-cover">
             </div>
             <h4 class="text-xl font-semibold text-blue-900 mb-3">Badan Permusyawaratan Desa (BPD)</h4>
             <div class="bg-blue-50 px-6 py-2 rounded-lg">
@@ -241,7 +241,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-3 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Ketua RW" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Ketua RW" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Ketua Dusun I</h4>
                 <div class="bg-gray-50 px-4 py-2 rounded-lg">
@@ -251,7 +251,7 @@
             
             <div class="text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-3 shadow-md">
-                    <img src="images/gambar.jpeg" alt="Ketua RT" class="w-full h-full object-cover">
+                    <img src="images/profil.jpg" alt="Ketua RT" class="w-full h-full object-cover">
                 </div>
                 <h4 class="text-lg font-semibold text-blue-900 mb-2">Ketua Dusun II</h4>
                 <div class="bg-gray-50 px-4 py-2 rounded-lg">

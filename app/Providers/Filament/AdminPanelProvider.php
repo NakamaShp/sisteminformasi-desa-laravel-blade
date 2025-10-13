@@ -29,14 +29,10 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->darkMode(false)
-
             ->brandName('Admin Panel')
-
-            // --- BARIS UNTUK MEMAKSA TEMA PUTIH (LIGHT MODE) ---
             ->defaultThemeMode(ThemeMode::Light)
-            // --------------------------------------------------
             ->colors([
-                'primary' => Color::Blue, // Mengisi nilai Color yang kosong dengan contoh Indigo
+                'primary' => Color::Blue, 
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -44,7 +40,9 @@ class AdminPanelProvider extends PanelProvider
                 Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
-            ->widgets([])
+            ->widgets([
+                Widgets\AccountWidget::class,
+            ])
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
