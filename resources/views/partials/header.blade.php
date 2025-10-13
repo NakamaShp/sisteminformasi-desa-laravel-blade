@@ -33,12 +33,12 @@
                     <i class="far fa-calendar-alt"></i>
                     <span id="currentDateTime"></span>
                 </div>
-
+                <!-- 
                 <a href="#"
                     class="flex items-center space-x-2 cursor-pointer hover:text-blue-600 transition-colors">
                     <i class="fas fa-user-circle text-lg"></i>
                     <span>Login</span>
-                </a>
+                </a> -->
             </div>
         </div>
     </header>

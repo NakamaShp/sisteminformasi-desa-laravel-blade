@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PotensiDesaController;
 use Illuminate\Support\Facades\Route;
 
 // menu nav
@@ -25,9 +26,7 @@ Route::get('/pengaduan', function () {
 // Route::get('/', function () {
 //     return view('pages.homepage');
 // });
-Route::get('/profildesa', function () {
-    return view('pages.profildesa');
-});
+Route::get('/profildesa', [PotensiDesaController::class, 'index'])->name('profildesa');
 Route::get('/berita', function () {
     return view('pages.news.berita');
 });
