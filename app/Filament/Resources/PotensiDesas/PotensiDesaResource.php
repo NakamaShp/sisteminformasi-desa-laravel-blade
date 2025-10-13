@@ -19,7 +19,7 @@ class PotensiDesaResource extends Resource
     protected static ?string $model = PotensiDesa::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::PresentationChartLine;
-    protected static string|\UnitEnum|null $navigationGroup = 'Halaman Depan';
+    protected static string|\UnitEnum|null $navigationGroup = 'Profil Desa';
     protected static ?string $navigationLabel = 'Potensi Desa';
     public static function getPluralLabel(): ?string
     {

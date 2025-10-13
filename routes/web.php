@@ -1,20 +1,21 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DokumenDesaController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PotensiDesaController;
+use App\Models\DokumenDesa;
 use Illuminate\Support\Facades\Route;
 
 // menu nav
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/layanan', function () {
-    return view('pages.layanan.layanan');
-});
 
+
+Route::get('/layanan', [DokumenDesaController::class, 'index'])->name('pages.layanan.layanan');
 // Route untuk cek status
 Route::get('/check-status', [PengaduanController::class, 'checkStatus'])->name('pengaduan.check-status');
 
