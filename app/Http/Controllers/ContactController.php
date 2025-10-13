@@ -18,12 +18,18 @@ class ContactController extends Controller
             'pesan' => 'required|string',
         ]);
 
-        // Simpan ke database
-        $message = ContactMessage::create($validated);
+        try {
+            // Simpan ke database
+            $message = ContactMessage::create($validated);
 
-        // Kirim email ke admin
-        Mail::to('info@desaairsenggeris.desa.id')->send(new ContactMessageMail($message));
+            // Kirim email ke admin
+            Mail::to('info.airsenggeris@gmail.com')->send(new ContactMessageMail($message));
 
-        return redirect()->back()->with('success', 'Pesan Anda telah dikirim dan diterima oleh tim kami.');
+            // Flash message sukses
+            return redirect()->back()->with('success', 'Pesan Anda berhasil dikirim!');
+        } catch (\Exception $e) {
+            // Flash message gagal
+            return redirect()->back()->with('error', 'Terjadi kesalahan. Silakan coba lagi.');
+        }
     }
 }

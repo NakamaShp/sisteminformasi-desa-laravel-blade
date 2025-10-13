@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ContactMessages\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
@@ -18,6 +19,7 @@ class ContactMessagesTable
                 TextColumn::make('nama')->sortable()->searchable(),
                 TextColumn::make('email'),
                 TextColumn::make('subjek')->limit(30),
+                TextColumn::make('pesan')->limit(30),
                 TextColumn::make('created_at')->dateTime('d M Y H:i')->label('Dikirim'),
             ])
             ->filters([
@@ -26,6 +28,7 @@ class ContactMessagesTable
             ->recordActions([
                 ViewAction::make(),
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

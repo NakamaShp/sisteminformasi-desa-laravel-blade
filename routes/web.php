@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/layanan', function () {
-    return view('layanan');
+    return view('pages.layanan.layanan');
 });
 
 // Route::get('/', function () {
@@ -40,6 +40,3 @@ Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengadua
 Route::get('/pengaduan', [PengaduanController::class, 'create'])->name('pengaduan.create');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
-
-

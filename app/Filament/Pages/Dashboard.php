@@ -12,7 +12,7 @@ use Termwind\Components\Hr;
 
 class Dashboard extends BaseDashboard
 {
-    protected static string|\BackedEnum|null $navigationIcon = Heroicon::Squares2x2;
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::HomeModern;
 
     // Hanya widget buatanmu sendiri
     public function getWidgets(): array
