@@ -19,17 +19,21 @@ class NewsForm
         return $schema
             ->components([
                 Select::make('author_id')
+                    ->label('Pembuat')
                     ->relationship('author', 'name')
                     ->required(),
                 Select::make('news_category_id')
+                    ->label('Kategori Berita')
                     ->relationship('newsCategory', 'title')
                     ->required(),
                 TextInput::make('title')
+                    ->label('Judul berita')
                     ->required()
                     ->live(onBlur: true)
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state))),
                 TextInput::make('slug')->readonly(),
                 FileUpload::make('thumbnail')
+                    ->label('Gambar')
                     ->required()
                     ->columnSpanFull()
                     ->disk('public')
@@ -37,10 +41,12 @@ class NewsForm
 
 
                 RichEditor::make('content')
+                    ->label('Konten')
                     ->required()
                     ->columnSpanfull()
                     ->extraAttributes(['style' => 'min-height: 300px;']),
                 Toggle::make('is_featured')
+                    ->label('Berita Unggulan ( Masuk Ke Berita Unggulan)')
 
 
 

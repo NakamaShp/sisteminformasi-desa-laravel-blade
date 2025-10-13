@@ -21,26 +21,29 @@ class BannersTable
         return $table
             ->columns([
                 TextColumn::make('news.title')
-                    ->label('News Title')
+                    ->label('Judul Berita')
                     ->limit(70)
                     ->tooltip(fn($state) => html_entity_decode(strip_tags($state)))
                     ->formatStateUsing(fn($state) => html_entity_decode(strip_tags($state))), // batasi hanya 50 karakter
                 ImageColumn::make('news.thumbnail')
-                    ->label('Thumbnail'),
+                    ->label('Gambar'),
                 TextColumn::make('news.newscategory.title')
-                    ->label('Category'),
+                    ->label('Kategori Berita'),
             ])
             ->filters([
                 //
             ])
             ->recordActions([
-                ViewAction::make(),
+                ViewAction::make()
+                    ->label('Lihat'),
                 EditAction::make(),
-                DeleteAction::make(),
+                DeleteAction::make()
+                    ->label('Hapus'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                    ->label('Hapus Massal'),
                 ]),
             ]);
     }

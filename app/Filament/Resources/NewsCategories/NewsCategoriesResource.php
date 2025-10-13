@@ -23,6 +23,7 @@ class NewsCategoriesResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Tag;
     protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
+    protected static ?string $navigationLabel = 'Kategori Berita';
 
     protected static ?string $recordTitleAttribute = 'NewsCategory';
 

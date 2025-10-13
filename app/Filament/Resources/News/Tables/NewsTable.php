@@ -10,6 +10,7 @@ use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Actions\ViewAction;
 use Filament\Actions\DeleteAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Columns\ToggleColumn as ToogleColumn;
 
@@ -21,23 +22,26 @@ class NewsTable
         return $table
             ->columns([
                 TextColumn::make('author.name')
-                    ->label('Author'),
+                    ->label('Penulis'),
                 TextColumn::make('newsCategory.title')
-                    ->label('Category'),
+                    ->label('Kategori'),
                 TextColumn::make('title')
-                    ->label('Title')
+                    ->label('Judul')
                     ->limit(30)
                     ->tooltip(fn($state) => html_entity_decode(strip_tags($state)))
                     ->formatStateUsing(fn($state) => html_entity_decode(strip_tags($state))), // batasi hanya 50 karakter
                 ImageColumn::make('thumbnail')
-                    ->label('Thumbnail'),
+                    ->label('Gambar'),
                 TextColumn::make('content')
-                    ->label('Content')
+                    ->label('Konten')
                     ->limit(50)
                     ->tooltip(fn($state) => html_entity_decode(strip_tags($state)))
                     ->formatStateUsing(fn($state) => html_entity_decode(strip_tags($state))), // batasi hanya 50 karakter
-                ToogleColumn::make('is_featured')
-                    ->label('Is Featured')
+                IconColumn::make('is_featured')
+                    ->alignCenter()
+                    ->label(' Berita Unggulan')
+                    ->boolean() // Menampilkan ikon (centang/silang)
+
 
 
 
@@ -45,19 +49,23 @@ class NewsTable
             ->filters([
                 SelectFilter::make('author_id')
                     ->relationship('author', 'name')
-                    ->label('Select Author'),
+                    ->label('Pilih Penulis'),
                 SelectFilter::make('news_category_id')
+
                     ->relationship('newsCategory', 'title')
-                    ->label('Select Category'),
+                    ->label('Pilih Kategori'),
             ])
             ->recordActions([
-                ViewAction::make(),
+                ViewAction::make()
+                    ->label('Lihat'),
                 EditAction::make(),
-                DeleteAction::make(),
+                DeleteAction::make()
+                    ->label('Hapus'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                        ->label('Hapus Massal'),
                 ]),
             ]);
     }

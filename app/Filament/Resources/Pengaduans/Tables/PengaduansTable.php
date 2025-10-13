@@ -44,14 +44,17 @@ class PengaduansTable
             ])
             ->recordActions([
 
-                ViewAction::make(),
+                ViewAction::make()
+                ->label('Lihat'),
                 EditAction::make(),
-                DeleteAction::make(),
+                DeleteAction::make()
+                ->label('Hapus'),
 
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                    ->label('Hapus Massal'),
                 ]),
             ]);
     }
