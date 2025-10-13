@@ -12,6 +12,7 @@ class BannersForm
         return $schema
             ->components([
                 Select::make('news_id')
+                    ->label('Berita')
                     ->relationship('news', 'title')
                     ->required(),
             ]);

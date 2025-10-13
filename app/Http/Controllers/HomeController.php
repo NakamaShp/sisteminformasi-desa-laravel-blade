@@ -12,8 +12,8 @@ class HomeController extends Controller
         // 1. Ambil data banner
         // Hanya ambil banner yang aktif dan urutkan
         $banners = HomeBanner::where('is_active', true)
-                            ->orderBy('order', 'asc') 
-                            ->get();
+            ->orderBy('order', 'asc')
+            ->get();
 
         // 2. Kirim data ke view
         // Pastikan nama view ('pages.homepage') sesuai dengan path file Blade Anda

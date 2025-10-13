@@ -26,6 +26,7 @@ class HomeBannerResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
     protected static string|\UnitEnum|null $navigationGroup = 'Halaman Depan';
+    protected static ?string $navigationLabel = 'Banner Beranda';
 
 
     protected static ?string $recordTitleAttribute = 'title';
@@ -37,10 +38,8 @@ class HomeBannerResource extends Resource
 
     public static function table(Table $table): Table
     {
-     
-            return HomeBannersTable::configure($table);
-              
-                
+
+        return HomeBannersTable::configure($table);
     }
 
     public static function getRelations(): array

@@ -10,6 +10,7 @@ class ListAuthors extends ListRecords
 {
     protected static string $resource = AuthorsResource::class;
 
+
     protected function getHeaderActions(): array
     {
         return [

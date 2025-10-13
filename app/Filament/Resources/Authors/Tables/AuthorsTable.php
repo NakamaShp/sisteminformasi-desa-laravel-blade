@@ -22,9 +22,9 @@ class AuthorsTable
                     ->label('Avatar')
                     ->circular(),
                 TextColumn::make('name')
-                    ->label('Name'),
+                    ->label('Nama'),
                 TextColumn::make('username')
-                    ->label('Username'),
+                    ->label('Nama Pengguna'),
                 TextColumn::make('bio')
                     ->label('Bio')
                     ->limit(50) // batasi hanya 50 karakter
@@ -34,13 +34,16 @@ class AuthorsTable
                 //
             ])
             ->recordActions([
-                ViewAction::make(),
+                ViewAction::make()
+                    ->label('Lihat'),
                 EditAction::make(),
-                DeleteAction::make(),
+                DeleteAction::make()
+                    ->label('Hapus'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                        ->label('Hapus Massal'),
                 ]),
             ]);
     }

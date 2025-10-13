@@ -195,30 +195,17 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+
+            @foreach ($banners as $index => $banner)
+
+
             <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Panorama sawah di desa" class="w-full h-48 object-cover">
+                <img src="{{ asset('storage/' . $banner->image) }}" alt="{{ $banner->title  }}" class="w-full h-48 object-cover">
             </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Rumah adat tradisional" class="w-full h-48 object-cover">
-            </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Festival budaya desa" class="w-full h-48 object-cover">
-            </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Lanskap pegunungan desa" class="w-full h-48 object-cover">
-            </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Petani bekerja di ladang" class="w-full h-48 object-cover">
-            </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Tanaman herbal tradisional" class="w-full h-48 object-cover">
-            </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Masyarakat desa berkumpul" class="w-full h-48 object-cover">
-            </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
-                <img src="" alt="Tradisi upacara adat" class="w-full h-48 object-cover">
-            </div>
+
+            @endforeach
+
         </div>
     </div>
 </section>

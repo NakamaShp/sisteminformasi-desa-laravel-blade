@@ -23,6 +23,7 @@ class AuthorsResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Users;
     protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
+    protected static ?string $navigationLabel = 'Pembuat';
 
 
     protected static ?string $recordTitleAttribute = 'Author';

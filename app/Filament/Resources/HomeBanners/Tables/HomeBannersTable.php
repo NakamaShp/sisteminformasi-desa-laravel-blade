@@ -33,9 +33,9 @@ class HomeBannersTable
 
                 // 3. Kolom Urutan
                 TextColumn::make('order')
-                    ->label('Urutan')
+                    ->label('Urutan Ke-')
                     ->sortable(),
-       
+
 
                 // 4. Kolom Status Aktif (Toggle)
                 IconColumn::make('is_active')
@@ -50,18 +50,21 @@ class HomeBannersTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true), // Sembunyikan secara default
             ])
-        
+
             ->filters([
                 //
             ])
             ->recordActions([
-                ViewAction::make(),
+                ViewAction::make()
+                    ->label('Lihat'),
                 EditAction::make(),
-                DeleteAction::make(),
+                DeleteAction::make()
+                    ->label('Hapus'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                        ->label('Hapus Massal'),
                 ]),
             ]);
     }

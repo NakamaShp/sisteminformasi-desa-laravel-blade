@@ -18,7 +18,7 @@ class NewsCategoriesTable
         return $table
             ->columns([
                 TextColumn::make('title')
-                    ->label('Title'),
+                    ->label('Judul'),
                 TextColumn::make('slug')
                     ->label('Slug'),
             ])
@@ -26,13 +26,17 @@ class NewsCategoriesTable
                 //
             ])
             ->recordActions([
-                ViewAction::make(),
-                EditAction::make(),
-                DeleteAction::make(),
+                ViewAction::make()
+                ->label('Lihat'),
+                EditAction::make()
+                ->label('Edit'),
+                DeleteAction::make()
+                ->label('Hapus'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+                    DeleteBulkAction::make()
+                    ->label('Hapus Massal'),
                 ]),
             ]);
     }

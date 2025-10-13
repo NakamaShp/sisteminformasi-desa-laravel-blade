@@ -17,8 +17,9 @@ use Filament\Tables\Table;
 class ContactMessageResource extends Resource
 {
     protected static ?string $model = ContactMessage::class;
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Kotak Pesan';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::InboxArrowDown;
+    protected static string|\UnitEnum|null $navigationGroup = 'Layanan Desa';
 
     public static function form(Schema $schema): Schema
     {
@@ -41,7 +42,7 @@ class ContactMessageResource extends Resource
     {
         return [
             'index' => ListContactMessages::route('/'),
-          
+
         ];
     }
 }

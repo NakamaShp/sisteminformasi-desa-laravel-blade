@@ -15,6 +15,7 @@ class NewsCategoriesForm
         return $schema
             ->components([
                 TextInput::make('title')
+                    ->label('Judul')
                     ->required()
                     ->live(onBlur: true)
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state))),
