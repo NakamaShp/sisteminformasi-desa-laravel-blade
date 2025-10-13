@@ -17,6 +17,10 @@ class PengaduansTable
     {
         return $table
             ->columns([
+                TextColumn::make('nomor_tiket')
+                    ->label('Kode Tiket')
+                    ->searchable(),
+
                 TextColumn::make('nama_lengkap')
                     ->label('Nama Lengkap')
                     ->searchable(),

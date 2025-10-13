@@ -3,13 +3,13 @@
 @section('title', 'Layanan Pengaduan Masyarakat')
 
 @section('content')
-{{-- Hero & Form Content sama seperti sebelumnya --}}
+    {{-- Hero & Form Content sama seperti sebelumnya --}}
 <section class="mt-1">
     {{-- Hero Section --}}
-    <div class="bg-blue-900 text-white py-10 hero-section h-64 md:h-30 flex items-center justify-center">
+    <div class="bg-blue-900 text-white py-10 hero-section h-36 md:h-30 flex items-center justify-center">
         <div class="p-20 container mx-auto px-4 text-center">
             <h1 class="text-xl md:text-3xl font-bold mb-2">Layanan Pengaduan Masyarakat</h1>
-            <p class="text-1xl text-blue-100 max-w-xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan
+            <p class="text-l text-blue-100 max-w-xl mx-auto">Sampaikan keluhan, kritik, dan saran Anda untuk kemajuan
                 desa kita bersama</p>
         </div>
     </div>
@@ -46,15 +46,7 @@
                     <div>
                         <label for="nik" class="block text-gray-700 font-medium mb-2">NIK <span
                                 class="text-red-500">*</span></label>
-                        <input
-                            type="text"
-                            id="nik"
-                            minlength="16"
-                            maxlength="16"
-                            inputmode="numeric"
-                            pattern="\d{16}"
-                            name="nik"
-                            required maxlength="16"
+                        <input type="text" id="nik" name="nik" required maxlength="16"
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="16 digit nomor NIK">
                         <div id="error-nik" class="text-red-600 text-sm mt-1"></div>
@@ -87,7 +79,7 @@
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                             <option value="">Pilih Kategori</option>
                             @foreach ($categories as $category)
-                            <option value="{{ $category }}">{{ $category }}</option>
+                                <option value="{{ $category }}">{{ $category }}</option>
                             @endforeach
                         </select>
                         <div id="error-kategori" class="text-red-600 text-sm mt-1"></div>
@@ -109,18 +101,18 @@
 
                         <input type="file" id="lampiran" name="lampiran" accept=".jpg,.jpeg,.png,.pdf"
                             class="
-                                    w-full 
-                                    text-sm text-gray-900 
-                                    border border-gray-300 
-                                    rounded
-                                    cursor-pointer 
-                                    bg-gray-50 
-                                    p-2.5 
-                                    file:mr-4 file:py-2 file:px-4 
-                                    file:rounded file:border-0
-                                    file:text-sm file:font-semibold
-                                    file:bg-gray-600 file:text-white
-                                    hover:file:bg-gray-700">
+                                w-full 
+                                text-sm text-gray-900 
+                                border border-gray-300 
+                                rounded
+                                cursor-pointer 
+                                bg-gray-50 
+                                p-2.5 
+                                file:mr-4 file:py-2 file:px-4 
+                                file:rounded file:border-0
+                                file:text-sm file:font-semibold
+                                file:bg-gray-600 file:text-white
+                                hover:file:bg-gray-700">
                         <p class="text-xs text-gray-600 mt-1">Format: JPG, PNG, PDF. Ukuran Maksimum: 2MB.</p>
                         <div id="error-lampiran" class="text-red-600 text-sm mt-1"></div>
                     </div>
@@ -167,15 +159,45 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg p-8 border border-blue-100">
+                <div id="initial-view"
+                    class="bg-white rounded-xl shadow-lg p-8 border border-blue-100 transition-all duration-300">
                     <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
                         <i data-feather="check-circle" class="mr-2"></i> Cek Status Pengaduan
                     </h2>
                     <div class="space-y-4">
-                        <button class="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800 transition">
+                        <button id="check-status-button"
+                            class="w-full bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition duration-150">
                             Cek Status
                         </button>
                     </div>
+                </div>
+
+                {{-- form cek status --}}
+                <div id="input-form-view"
+                    class="hidden bg-white rounded-xl shadow-lg p-8 border border-blue-100 mt-6 transition-all duration-300">
+                    <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
+                        <i data-feather="search" class="mr-2"></i> Masukkan Kode Pengaduan
+                    </h2>
+                    <form action="/check-status" method="GET" class="space-y-6">
+                        <div>
+                            <label for="complaint-code" class="block text-sm font-medium text-gray-700 mb-2">Kode
+                                Status Pengaduan</label>
+                            <input type="text" id="complaint-code" name="code" required
+                                placeholder="Contoh: KPD-2025-00123"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            <p class="mt-2 text-sm text-gray-500">Masukkan kode unik pengaduan Anda untuk melihat
+                                statusnya.</p>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-150">
+                            Cari Status
+                        </button>
+                    </form>
+                    <button id="back-button"
+                        class="mt-4 w-full text-blue-900 px-6 py-2 rounded-lg font-semibold hover:text-blue-700 transition duration-150 text-sm">
+                        &larr; Kembali
+                    </button>
                 </div>
             </section>
         </div>
@@ -221,14 +243,14 @@
             const formData = new FormData(form);
 
             // Send AJAX request
-            fetch('{{ route("pengaduan.store") }}' , {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                    'Accept': 'application/json'
-                        },
-                    })
+            fetch('{{ route('pengaduan.store') }}', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Accept': 'application/json'
+                    }
+                })
                 .then(response => response.json())
                 .then(data => {
                     console.log('Response:', data);
@@ -239,12 +261,13 @@
                             icon: 'success',
                             title: 'Pengaduan Terkirim!',
                             html: `
-                                <p class="mb-4">Terima kasih, pengaduan Anda telah kami terima.</p>
-                                <div class="bg-blue-50 border-2 border-blue-200 p-4 rounded-lg">
-                                    <p class="text-sm text-gray-600 mb-2">Nomor Tiket Anda:</p>
-                                    <p class="text-2xl font-bold text-blue-900">${data.ticket_number}</p>
-                                </div>
-                            `,
+        <p class="mb-4">Terima kasih, pengaduan Anda telah kami terima.</p>
+        <p class="mb-4 text-red-500">Note: Harap simpan Nomor Tiket Anda.</p>
+        <div class="bg-blue-50 border-2 border-blue-200 p-4 rounded-lg">
+            <p class="text-sm text-gray-600 mb-2">Nomor Tiket Anda:</p>
+            <p class="text-2xl font-bold text-blue-900">${data.ticket_number}</p>
+        </div>
+    `,
                             confirmButtonColor: '#1e3a8a',
                             confirmButtonText: 'OK'
                         });
@@ -277,6 +300,25 @@
                     btn.textContent = 'Kirim Pengaduan';
                 });
         });
+    });
+
+    // javascript cek status    
+    feather.replace();
+
+    // Logika sederhana untuk menampilkan/menyembunyikan form
+    const initialView = document.getElementById('initial-view');
+    const inputFormView = document.getElementById('input-form-view');
+    const checkStatusButton = document.getElementById('check-status-button');
+    const backButton = document.getElementById('back-button');
+
+    checkStatusButton.addEventListener('click', () => {
+        initialView.classList.add('hidden');
+        inputFormView.classList.remove('hidden');
+    });
+
+    backButton.addEventListener('click', () => {
+        inputFormView.classList.add('hidden');
+        initialView.classList.remove('hidden');
     });
 </script>
 @endsection

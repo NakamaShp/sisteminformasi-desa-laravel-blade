@@ -14,6 +14,14 @@ Route::get('/layanan', function () {
     return view('pages.layanan.layanan');
 });
 
+// Route untuk cek status
+Route::get('/check-status', [PengaduanController::class, 'checkStatus'])->name('pengaduan.check-status');
+
+Route::get('/pengaduan', function () {
+    // Pastikan path view ini sudah benar
+    return view('pages.pengaduan.pengaduan');
+})->name('pengaduan');
+
 // Route::get('/', function () {
 //     return view('pages.homepage');
 // });
@@ -28,7 +36,7 @@ Route::get('/kontak', function () {
 });
 Route::get('/pengaduan', function () {
     return view('pages.pengaduan.pengaduan');
-});
+})->name('pages.pengaduan.pengaduan');
 
 
 // berita

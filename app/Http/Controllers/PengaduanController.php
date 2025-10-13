@@ -66,12 +66,12 @@ class PengaduanController extends Controller
             $path = null;
             if ($request->hasFile('lampiran')) {
                 $file = $request->file('lampiran');
-                
+
                 // Validasi file ada dan valid
                 if ($file->isValid()) {
                     $fileName = $nomorTiket . '_' . time() . '.' . $file->getClientOriginalExtension();
                     $path = $file->storeAs('lampiran_pengaduan', $fileName, 'public');
-                    
+
                     // Log upload berhasil
                     Log::info('File uploaded successfully: ' . $path);
                 }
@@ -112,21 +112,19 @@ class PengaduanController extends Controller
                     'created_at' => $pengaduan->created_at->format('d/m/Y H:i')
                 ]
             ], 201);
-
         } catch (\Illuminate\Validation\ValidationException $e) {
             // Rollback jika validasi gagal
             DB::rollBack();
-            
+
             return response()->json([
                 'success' => false,
                 'message' => 'Validasi gagal',
                 'errors' => $e->errors()
             ], 422);
-
         } catch (\Exception $e) {
             // Rollback jika ada error
             DB::rollBack();
-            
+
             // Log error detail
             Log::error('Gagal menyimpan pengaduan: ' . $e->getMessage(), [
                 'file' => $e->getFile(),
@@ -149,6 +147,7 @@ class PengaduanController extends Controller
     {
         $pengaduans = Pengaduan::orderBy('created_at', 'desc')->paginate(10);
         return view('admin.pengaduan.index', compact('pengaduans'));
+        
     }
 
     /**
@@ -177,6 +176,35 @@ class PengaduanController extends Controller
             'success' => true,
             'message' => 'Status berhasil diupdate',
             'status' => $pengaduan->status
+        ]);
+    }
+
+    // method check status
+    public function checkStatus(Request $request)
+    {
+        // 1. Validasi input kode
+        $request->validate([
+            'code' => 'required|string|max:12|regex:/^[A-Z]{3}-[A-Z0-9]{8}$/', // Sesuaikan regex dengan format kode Anda
+        ], [
+            'code.required' => 'Kode pengaduan wajib diisi.',
+            'code.regex' => 'Format kode pengaduan tidak valid (Contoh: KPD-2025-00123).',
+        ]);
+
+        $nomor_tiket = $request->input('code');
+
+        // 2. Cari data pengaduan
+        $pengaduan = Pengaduan::where('nomor_tiket', $nomor_tiket)->first();
+
+        // 3. Tangani jika data tidak ditemukan
+        if (!$pengaduan) {
+            return redirect()
+                ->route('/pengaduan') // Ganti dengan route halaman pengaduan Anda
+                ->with('error', 'Kode pengaduan **' . $nomor_tiket . '** tidak ditemukan. Pastikan kode sudah benar.');
+        }
+
+        // 4. Tampilkan halaman detail status dengan data pengaduan
+        return view('pages.pengaduan.status_detail', [
+            'pengaduan' => $pengaduan,
         ]);
     }
 }
