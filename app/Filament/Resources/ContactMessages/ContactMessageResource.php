@@ -20,6 +20,15 @@ class ContactMessageResource extends Resource
     protected static ?string $navigationLabel = 'Kotak Pesan';
     protected static string|BackedEnum|null $navigationIcon = Heroicon::InboxArrowDown;
     protected static string|\UnitEnum|null $navigationGroup = 'Layanan Desa';
+    public static function getPluralLabel(): ?string
+    {
+        return 'Layanan Desa';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Layanan Desa';
+    }
 
     public static function form(Schema $schema): Schema
     {

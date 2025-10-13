@@ -27,6 +27,15 @@ class HomeBannerResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
     protected static string|\UnitEnum|null $navigationGroup = 'Halaman Depan';
     protected static ?string $navigationLabel = 'Banner Beranda';
+    public static function getPluralLabel(): ?string
+    {
+        return 'Banner Beranda';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Banner Beranda';
+    }
 
 
     protected static ?string $recordTitleAttribute = 'title';

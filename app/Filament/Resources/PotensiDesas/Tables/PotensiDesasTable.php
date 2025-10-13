@@ -14,18 +14,19 @@ use Filament\Tables\Table;
 
 class PotensiDesasTable
 {
+
+
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                ImageColumn::make('image')
-                    ->label('Gambar'),
+
                 TextColumn::make('title')
                     ->label('Judul')
                     ->searchable(),
                 TextColumn::make('description')
                     ->label('Deskripsi')
-                    ->limit(80),
+                    ->limit(50),
                 TextColumn::make('created_at')
                     ->label('Dibuat')
                     ->dateTime('d M Y'),

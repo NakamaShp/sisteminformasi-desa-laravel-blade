@@ -25,6 +25,16 @@ class NewsCategoriesResource extends Resource
     protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
     protected static ?string $navigationLabel = 'Kategori Berita';
 
+    public static function getPluralLabel(): ?string
+    {
+        return 'Kategori Berita';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Kategori Berita';
+    }
+
     protected static ?string $recordTitleAttribute = 'NewsCategory';
 
     public static function form(Schema $schema): Schema

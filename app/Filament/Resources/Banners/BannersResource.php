@@ -25,6 +25,15 @@ class BannersResource extends Resource
     protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
     protected static ?string $navigationLabel = 'Banner Berita';
     protected static ?string $recordTitleAttribute = 'Banner';
+    public static function getPluralLabel(): ?string
+    {
+        return 'Banner';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Banner';
+    }
 
     public static function form(Schema $schema): Schema
     {

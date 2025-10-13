@@ -10,9 +10,11 @@ class ListPotensiDesas extends ListRecords
 {
     protected static string $resource = PotensiDesaResource::class;
 
+    protected static ?string $Label = 'Potensi Desa';
     protected function getHeaderActions(): array
     {
         return [
+
             CreateAction::make(),
         ];
     }

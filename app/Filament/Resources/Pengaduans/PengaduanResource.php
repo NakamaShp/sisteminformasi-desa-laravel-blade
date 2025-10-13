@@ -22,6 +22,16 @@ class PengaduanResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ChatBubbleLeft;
 
     protected static ?string $navigationLabel = 'Pengaduan';
+
+    public static function getPluralLabel(): ?string
+    {
+        return 'Pengaduan';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Pengaduan';
+    }
     protected static string|\UnitEnum|null $navigationGroup = 'Layanan Desa';
 
     public static function form(Schema $schema): Schema

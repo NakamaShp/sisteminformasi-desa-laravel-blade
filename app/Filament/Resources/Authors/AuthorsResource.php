@@ -23,9 +23,17 @@ class AuthorsResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Users;
     protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
-    protected static ?string $navigationLabel = 'Pembuat';
+    protected static ?string $navigationLabel = 'Penulis';
 
+    public static function getPluralLabel(): ?string
+    {
+        return 'Penulis';
+    }
 
+    public static function getLabel(): ?string
+    {
+        return 'Penulis';
+    }
     protected static ?string $recordTitleAttribute = 'Author';
 
     public static function form(Schema $schema): Schema

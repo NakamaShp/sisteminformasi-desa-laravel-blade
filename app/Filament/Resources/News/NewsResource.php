@@ -24,6 +24,16 @@ class NewsResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Newspaper;
     protected static string|\UnitEnum|null $navigationGroup = 'Berita & Informasi';
 
+    public static function getPluralLabel(): ?string
+    {
+        return 'Berita';
+    }
+
+    public static function getLabel(): ?string
+    {
+        return 'Berita';
+    }
+
 
     protected static ?string $recordTitleAttribute = 'News';
 
