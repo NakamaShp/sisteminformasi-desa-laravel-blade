@@ -23,6 +23,9 @@ class PengaduanForm
     {
         return $schema
             ->components([
+                TextInput::make('nomor_tiket')
+                    ->label('Nomer Tiket')
+                    ->disabled(),
                 TextInput::make('nama_lengkap')
                     ->label('Nama Lengkap')
                     ->disabled(),

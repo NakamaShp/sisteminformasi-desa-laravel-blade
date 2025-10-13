@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class=" bg-gray-900 mt-1  text-white py-12">
+    <section class=" bg-blue-900 mt-1  text-white py-12">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-3xl font-bold mb-4">Pelayanan Masyarakat Desa Air Senggeris</h2>
             <p class="text-xl mb-8 max-w-xl mx-auto">Temukan berbagai layanan administrasi desa yang dapat anda akses secara
@@ -23,12 +23,12 @@
     <!-- Services Section -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Layanan Administratif</h2>
+            <h2 class="text-3xl font-bold text-center bg-blue-800 rounded-lg w-100 mx-auto py-3 text-white mb-12">Layanan Administratif</h2>
 
             <div class="text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service Card 1 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -40,221 +40,223 @@
                             administrasi.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 1 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
-                                →</a>
+                                    class="inline mr-1 w-4 h-4"></i>Variatif</span>
+                            {{-- <a href="#" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan
+                                →</a> --}}
                         </div>
                     </div>
                 </div>
 
                 <!-- Service Card 2 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="user-plus" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="user-plus" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Usaha</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Usaha</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Pendaftaran, perubahan data, dan penerbitan kartu keluarga.</p>
+                        <p class="text-secondary-500 mb-4">Mengakui legalitas dan keberadaan usaha (syarat
+                            pinjaman/perizinan).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 3 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
-                                →</a href="">
+                                    class="inline mr-1 w-4 h-4"></i> Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
+                                →</a href=""> --}}
                         </div>
                     </div>
                 </div>
 
                 <!-- Service Card 3 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="home" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="home" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Kematian</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Kematian</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Pengajuan izin pembangunan rumah atau bangunan lainnya.</p>
+                        <p class="text-secondary-500 mb-4">Dasar hukum pencatatan kematian (syarat warisan dan pensiun).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 5 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
-                                →</a href="">
+                                    class="inline mr-1 w-4 h-4"></i> Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
+                                →</a href=""> --}}
                         </div>
                     </div>
                 </div>
 
                 <!-- Service Card 4 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="heart" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="heart" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Tidak Mampu</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Tidak Mampu</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Keterangan untuk mengakses bantuan sosial dan kesehatan.</p>
+                        <p class="text-secondary-500 mb-4">Verifikasi kondisi ekonomi lemah (syarat akses bantuan
+                            sosial/kesehatan).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 2 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
-                                →</a href="">
+                                    class="inline mr-1 w-4 h-4"></i> Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
+                                →</a href=""> --}}
                         </div>
                     </div>
                 </div>
 
                 <!-- Service Card 5 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="book" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="book" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Penghasilan Orang Tua</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Penghasilan Orang Tua</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Pengurusan dokumen kelahiran untuk warga desa.</p>
+                        <p class="text-secondary-500 mb-4">Bukti kemampuan finansial keluarga (syarat pengajuan
+                            beasiswa/bantuan pendidikan).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 3 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
-                                →</a href="">
+                                    class="inline mr-1 w-4 h-4"></i> Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat Persyaratan
+                                →</a href=""> --}}
                         </div>
                     </div>
                 </div>
 
                 <!-- Service Card 6 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="file-plus" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="file-plus" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Pindah/Datang WNI</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Pindah/Datang WNI</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Temukan berbagai layanan administrasi lainnya yang tersedia.</p>
+                        <p class="text-secondary-500 mb-4">Dasar perubahan data kependudukan akibat perpindahan domisili.
+                        </p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="info"
                                     class="inline mr-1 w-4 h-4"></i> Variatif</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
-                                Persyaratan →</a>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan →</a> --}}
                         </div>
                     </div>
                 </div>
 
-                <!-- Service Card 1 -->
+                <!-- Service Card 7 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="file-text" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="file-text" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Kehilangan</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Kehilangan</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Surat keterangan tempat tinggal untuk berbagai keperluan
-                            administrasi.</p>
+                        <p class="text-secondary-500 mb-4">Bukti laporan kehilangan dokumen (syarat mengurus duplikat).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 1 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
-                                Persyaratan →</a>
+                                    class="inline mr-1 w-4 h-4"></i>Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan →</a> --}}
                         </div>
                     </div>
                 </div>
 
-                <!-- Service Card 1 -->
+                <!-- Service Card 8 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="file-text" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="file-text" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Kuasa Ahli Waris</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Kuasa Ahli Waris</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Surat keterangan tempat tinggal untuk berbagai keperluan
-                            administrasi.</p>
+                        <p class="text-secondary-500 mb-4">Menetapkan dan mengesahkan hak ahli waris atas harta
+                            peninggalan.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 1 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
-                                Persyaratan →</a>
+                                    class="inline mr-1 w-4 h-4"></i>Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan →</a> --}}
                         </div>
                     </div>
                 </div>
 
-                <!-- Service Card 1 -->
+                <!-- Service Card 9 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="file-text" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="file-text" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Jual Beli Tanah</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Jual Beli Tanah</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Surat keterangan tempat tinggal untuk berbagai keperluan
-                            administrasi.</p>
+                        <p class="text-secondary-500 mb-4">Bukti otentik transaksi peralihan hak kepemilikan tanah.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 1 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
-                                Persyaratan →</a>
+                                    class="inline mr-1 w-4 h-4"></i>Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan →</a> --}}
                         </div>
                     </div>
                 </div>
 
-                <!-- Service Card 1 -->
+                <!-- Service Card 10 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="file-text" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="file-text" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Pengantar Perkawinan</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Pengantar Perkawinan</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Surat keterangan tempat tinggal untuk berbagai keperluan
-                            administrasi.</p>
+                        <p class="text-secondary-500 mb-4">Pengantar awal untuk mengurus pernikahan di KUA/Catatan Sipil.
+                        </p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 1 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
-                                Persyaratan →</a>
+                                    class="inline mr-1 w-4 h-4"></i>Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan →</a> --}}
                         </div>
                     </div>
                 </div>
 
-                <!-- Service Card 1 -->
+                <!-- Service Card 11 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-blue-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
-                                <i data-feather="file-text" class="text-primary-900 w-6 h-6"></i>
+                                <i data-feather="file-text" class="text-primary-800 w-6 h-6"></i>
                             </div>
-                            <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Belum Menikah</h3>
+                            <h3 class="text-xl font-semibold text-primary-800">Surat Keterangan Belum Menikah</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Surat keterangan tempat tinggal untuk berbagai keperluan
-                            administrasi.</p>
+                        <p class="text-secondary-500 mb-4">Bukti resmi status belum menikah (syarat nikah, kerja, dsb).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 1 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
-                                Persyaratan →</a>
+                                    class="inline mr-1 w-4 h-4"></i>Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan →</a> --}}
                         </div>
                     </div>
                 </div>
 
-                <!-- Service Card 1 -->
+                <!-- Service Card 12 -->
                 <div
-                    class="service-card bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    class="service-card bg-blue-800 rounded-xl shadow-md overflow-hidden border border-gray-100 transition duration-300">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-primary-100 p-3 rounded-full mr-4">
@@ -262,13 +264,13 @@
                             </div>
                             <h3 class="text-xl font-semibold text-primary-900">Surat Keterangan Hibah/Wakaf</h3>
                         </div>
-                        <p class="text-secondary-500 mb-4">Surat keterangan tempat tinggal untuk berbagai keperluan
-                            administrasi.</p>
+                        <p class="text-secondary-500 mb-4">Mengurus legalitas pemberian aset untuk kepentingan pribadi
+                            (hibah) atau umum/agama (wakaf).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-secondary-500"><i data-feather="clock"
-                                    class="inline mr-1 w-4 h-4"></i> 1 Hari Kerja</span>
-                            <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
-                                Persyaratan →</a>
+                                    class="inline mr-1 w-4 h-4"></i>Variatif</span>
+                            {{-- <a href="" class="text-primary-500 font-medium hover:text-primary-700">Lihat
+                                Persyaratan →</a> --}}
                         </div>
                     </div>
                 </div>
