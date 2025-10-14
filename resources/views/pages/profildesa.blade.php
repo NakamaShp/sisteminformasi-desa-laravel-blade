@@ -31,25 +31,25 @@
                 </div>
                 <div class="p-6">
                     <h4 class="text-lg font-semibold text-blue-900 mb-3">Visi Desa</h4>
-                    <p class="text-gray-700 mb-6">"Mewujudkan Desa Air Senggeris yang mandiri, berbudaya, dan sejahtera dalam bingkai gotong royong."</p>
+                    <p class="text-gray-700 mb-6">"Mewujudkan Desa Air Senggeris yang mandiri, berbudaya, dan sejahtera dalam bingkai gotong royong"</p>
 
                     <h4 class="text-lg font-semibold text-blue-900 mb-3">Misi Desa</h4>
                     <ul class="space-y-2 text-gray-700">
                         <li class="flex items-start">
                             <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                            <span>- Meningkatkan kualitas sumber daya manusia.</span>
+                            <span>Meningkatkan kualitas sumber daya manusia.</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                            <span>- Mengembangkan ekonomi kreatif berbasis lokal.</span>
+                            <span>Mengembangkan ekonomi kreatif berbasis lokal.</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                            <span>- Melestarikan budaya dan kearifan lokal.</span>
+                            <span>Melestarikan budaya dan kearifan lokal.</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 flex-shrink-0"></i>
-                            <span>- Membangun infrastruktur berkelanjutan.</span>
+                            <span>Membangun infrastruktur berkelanjutan.</span>
                         </li>
                     </ul>
                 </div>

@@ -7,10 +7,10 @@
         <h2 class="text-3xl md:text-3xl font-bold mb-4">Pelayanan Masyarakat Desa Air Senggeris</h2>
         <p class="text-xl mb-8 max-w-xl mx-auto">Temukan berbagai layanan administrasi desa yang dapat anda akses secara
             mudah dan transparan</p>
-        <div class="flex justify-center space-x-4">
+        <div class="flex justify-center space-x-4 flex-wrap">
             @foreach ($dokumen as $doc)
             <a href="{{ asset('storage/' . $doc->file) }}" download
-                class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition flex items-center gap-2">
+                class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition flex items-center gap-2 m-1">
                 <i class="fas fa-file-pdf"></i>
                 <span>{{ $doc->nama }}</span>
                 <i class="fas fa-download ml-2"></i>
@@ -23,7 +23,7 @@
 <!-- Services Section -->
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center bg-blue-800 rounded-lg w-100 mx-auto py-3 text-white mb-12">Layanan Administratif</h2>
+        <h2 class="text-3xl font-bold text-center bg-blue-800 rounded-lg w-60 mx-auto py-3 text-white mb-12">Layanan Administratif</h2>
 
         <div class="text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Service Card 1 -->
@@ -279,7 +279,7 @@
 </section>
 
 <!-- Service Guide Section -->
-<section id="panduan-layanan" class="py-16 bg-gray-50">
+<section id="panduan-layanan" class="py-2 bg-gray-50">
     <div class="container mx-auto px-4">
 
         <div class="flex flex-col md:flex-row items-stretch gap-8">
