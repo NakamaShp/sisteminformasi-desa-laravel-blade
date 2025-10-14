@@ -4,7 +4,7 @@
     feather.replace(); // Perintah untuk memproses semua tag [data-feather]
 </script>
 
-<section class="bg-white shadow-md">
+<section class="bg-white shadow-md z-50">
     <header>
         {{-- Kontainer Utama: flex-col (Vertikal) di Mobile, flex-row (Horizontal) di Desktop --}}
         <div class="container mx-auto px-4 py-1 flex flex-col md:flex-row md:justify-between md:items-center">
@@ -13,7 +13,7 @@
             {{-- Default: Tetap di kiri (align-start) dan berikan jarak bawah --}}
             <div class="flex items-center space-x-2 mb-2 md:mb-2 mt-2">
                 <div class="relative">
-                    <img src="images/logo-desa.jpg" alt="Logo Desa"
+                    <img src="{{asset('images/logo-desa.jpg')  }}" alt="Logo Desa"
                         class="rounded-full border-4 border-blue-900 w-10 md:w-12 lg:w-10">
                 </div>
                 <div>
