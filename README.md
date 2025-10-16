@@ -121,5 +121,6 @@ Seluruh hak cipta dilindungi dan tidak untuk penggunaan komersial tanpa izin.
 
 **Khalifa Alhasan & M. Raffi Ashidiqie**
 Pengembang Web & Mahasiswa Sistem Informasi
-Instagram : [https://www.instagram.com/aal.psd/?hl=id](@aal.psd) 
-             [https://www.instagram.com/raffi_f18/?hl=id](@rafi_f18)
+
+Instagram : [@aal.psd](https://www.instagram.com/aal.psd/?hl=id)
+             [@rafi_f18](https://www.instagram.com/raffi_f18/?hl=id)
