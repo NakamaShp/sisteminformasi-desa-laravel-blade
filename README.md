@@ -16,6 +16,8 @@ Deployment (Process)
 
 ![Tampilan Landing Page](https://github.com/NakamaShp/sisteminformasi-desa-laravel-blade/blob/main/adminpanel.jpg)
 
+---
+
 ## Fitur Utama
 
 * **Pengaduan Online**
