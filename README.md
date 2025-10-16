@@ -102,6 +102,7 @@ php artisan migrate --seed
 
 ```bash
 php artisan serve
+npm run dev
 ```
 
 Akses proyek melalui:
@@ -118,6 +119,6 @@ Seluruh hak cipta dilindungi dan tidak untuk penggunaan komersial tanpa izin.
 
 ## Pengembang
 
-**Khalifa Alhasan**
+**Khalifa Alhasan & M. Raffi Ashidiqie**
 Pengembang Web & Mahasiswa Sistem Informasi
 Email: [info.airsenggeris@gmail.com](mailto:info.airsenggeris@gmail.com)
